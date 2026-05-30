@@ -6,11 +6,13 @@
     <title>Future Stars 2026</title>
     <style>
         :root {
-            --primary-color: #003b73;
-            --secondary-color: #0074b7;
+            /* Simons Foundation specific palette */
+            --primary-color: #004b57; 
+            --secondary-color: #007a87;
             --background-color: #f4f7f6;
             --text-color: #333333;
             --card-bg: #ffffff;
+            --inst-color: #666666;
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -95,12 +97,27 @@
             border-radius: 6px;
             border-left: 4px solid var(--secondary-color);
         }
+        .speaker-name {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        .speaker-inst {
+            font-size: 0.9em;
+            color: var(--inst-color);
+        }
         footer {
             text-align: center;
             padding: 30px 20px;
             background-color: var(--primary-color);
             color: #ffffff;
             font-size: 0.9em;
+        }
+        footer a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        footer a:hover {
+            color: #e0e0e0;
         }
         footer p {
             margin: 5px 0;
@@ -137,7 +154,11 @@
             <div class="card">
                 <h3>Event Details</h3>
                 <p><strong>Dates:</strong> July 20-22, 2026</p>
-                <p><strong>Location:</strong><br>University of Pennsylvania<br>David Rittenhouse Laboratory<br>209 S 33rd Street<br>Philadelphia, PA 19104</p>
+                <p><strong>Location:</strong><br>
+                University of Pennsylvania<br>
+                <a href="https://www.google.com/maps/search/?api=1&query=David+Rittenhouse+Laboratory,+209+S+33rd+Street,+Philadelphia,+PA+19104" target="_blank" style="color: var(--secondary-color);">David Rittenhouse Laboratory<br>
+                209 S 33rd Street<br>
+                Philadelphia, PA 19104</a></p>
                 <p><strong>Information:</strong> <a href="http://imsa.miami.edu" target="_blank" style="color: var(--secondary-color);">imsa.miami.edu</a></p>
                 
                 <h3 style="margin-top: 30px;">Program Highlights</h3>
@@ -148,26 +169,26 @@
         <div class="card">
             <h3>Confirmed Speakers</h3>
             <div class="speakers-grid">
-                <div class="speaker">Carolina Araujo, IMPA</div>
-                <div class="speaker">Leonardo Cavenaghi, ICMS</div>
-                <div class="speaker">Moira Chas, Stony Brook</div>
-                <div class="speaker">Sergei Gukov, Caltech</div>
-                <div class="speaker">Ernesto Lupercio, ICMS/Cinvestav</div>
-                <div class="speaker">Jaqueline Mesquita, UNICAMP</div>
-                <div class="speaker">Tony Pantev, UPENN</div>
-                <div class="speaker">Carlos Alfonso Ruiz Guido, Colegio de Matemáticas Bourbaki</div>
-                <div class="speaker">Dennis Sullivan, Stony Brook/CUNY</div>
-                <div class="speaker">Yuri Tschinkel, CIMS/NYU, Simons Foundation</div>
-                <div class="speaker">Jacob Tsimerman, Toronto</div>
-                <div class="speaker">Claire Voisin, CNRS</div>
-                <div class="speaker">Lauren Williams, Harvard</div>
+                <div class="speaker"><span class="speaker-name">Carolina Araujo</span>, <span class="speaker-inst">IMPA</span></div>
+                <div class="speaker"><span class="speaker-name">Leonardo Cavenaghi</span>, <span class="speaker-inst">ICMS</span></div>
+                <div class="speaker"><span class="speaker-name">Moira Chas</span>, <span class="speaker-inst">Stony Brook</span></div>
+                <div class="speaker"><span class="speaker-name">Sergei Gukov</span>, <span class="speaker-inst">Caltech</span></div>
+                <div class="speaker"><span class="speaker-name">Ernesto Lupercio</span>, <span class="speaker-inst">ICMS/Cinvestav</span></div>
+                <div class="speaker"><span class="speaker-name">Jaqueline Mesquita</span>, <span class="speaker-inst">UNICAMP</span></div>
+                <div class="speaker"><span class="speaker-name">Tony Pantev</span>, <span class="speaker-inst">UPENN</span></div>
+                <div class="speaker"><span class="speaker-name">Carlos Alfonso Ruiz Guido</span>, <span class="speaker-inst">Colegio de Matemáticas Bourbaki</span></div>
+                <div class="speaker"><span class="speaker-name">Dennis Sullivan</span>, <span class="speaker-inst">Stony Brook/CUNY</span></div>
+                <div class="speaker"><span class="speaker-name">Yuri Tschinkel</span>, <span class="speaker-inst">CIMS/NYU, Simons Foundation</span></div>
+                <div class="speaker"><span class="speaker-name">Jacob Tsimerman</span>, <span class="speaker-inst">Toronto</span></div>
+                <div class="speaker"><span class="speaker-name">Claire Voisin</span>, <span class="speaker-inst">CNRS</span></div>
+                <div class="speaker"><span class="speaker-name">Lauren Williams</span>, <span class="speaker-inst">Harvard</span></div>
             </div>
         </div>
     </div>
 
     <footer>
         <p>Advancing the next generation of mathematical researchers.</p>
-        <p>Supported by the Simons Foundation, ICMS Sofia, SCGP Stony Brook, FAPESP and IMSA.</p>
+        <p>Supported by the <a href="https://www.simonsfoundation.org/" target="_blank">Simons Foundation</a>, <a href="https://icms.bg/" target="_blank">ICMS Sofia</a>, <a href="https://scgp.stonybrook.edu/" target="_blank">SCGP Stony Brook</a>, <a href="https://fapesp.br/" target="_blank">FAPESP</a>, and <a href="https://imsa.miami.edu/" target="_blank">IMSA</a>.</p>
     </footer>
 </body>
 </html>
