@@ -3,135 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Stars 2026 - Math Conference</title>
+    <title>Future Stars 2026</title>
     <style>
+        :root {
+            --primary-color: #003b73;
+            --secondary-color: #0074b7;
+            --background-color: #f4f7f6;
+            --text-color: #333333;
+            --card-bg: #ffffff;
+        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
         }
         header {
-            text-align: center;
+            background-color: var(--primary-color);
+            color: #ffffff;
             padding: 40px 20px;
-            background-color: #ffffff;
-            border-bottom: 2px solid #0055a4;
-            margin-bottom: 30px;
+            text-align: center;
         }
-        h1 {
-            color: #0055a4;
+        header h1 {
+            margin: 0;
             font-size: 2.5em;
-            margin-bottom: 5px;
+            letter-spacing: 1px;
         }
-        h2 {
-            color: #555;
-            font-size: 1.5em;
-            font-weight: normal;
-            margin-top: 0;
+        header h2 {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            font-weight: 300;
         }
-        .intro-text {
-            font-size: 1.1em;
-            text-align: justify;
-            background: #fff;
-            padding: 20px;
-            border-left: 4px solid #0055a4;
-            margin-bottom: 30px;
-        }
-        .section-title {
-            color: #0055a4;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
-        .speakers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-        .speaker-item {
-            background: #fff;
+        nav {
+            background-color: var(--secondary-color);
             padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            text-align: center;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 30px;
+            margin-bottom: 30px;
         }
         .poster-container {
             text-align: center;
-            margin: 30px 0;
+            margin-bottom: 30px;
         }
         .poster-container img {
             max-width: 100%;
             height: auto;
-            border: 1px solid #ccc;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
-        .info-box {
-            background: #eef5fa;
-            padding: 20px;
-            border-radius: 4px;
-            margin-bottom: 20px;
+        h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .speaker {
+            background: var(--background-color);
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid var(--secondary-color);
         }
         footer {
             text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #ccc;
+            padding: 30px 20px;
+            background-color: var(--primary-color);
+            color: #ffffff;
             font-size: 0.9em;
-            color: #666;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>FUTURE STARS [cite: 1]</h1>
-        <h2>Annual Meeting of the Simons Foundation for Supported Institutions [cite: 2]</h2>
-        <p><em>Advancing the next generation of mathematical researchers. [cite: 19]</em></p>
+        <h1>FUTURE STARS</h1>
+        <h2>Annual Meeting of the Simons Foundation for Supported Institutions</h2>
     </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="program.html">Program</a>
+    </nav>
 
-    <div class="intro-text">
-        <p>We are pleased to announce the Future Stars Annual Meeting of the Simons Foundation for Supported Institutions. The conference will be held from July 20 to 22, 2026, at the University of Pennsylvania, David Rittenhouse Laboratory, located at 209 S 33rd Street, Philadelphia, PA 19104.</p>
-    </div>
+    <div class="container">
+        <div class="card">
+            <p>We are pleased to announce the Future Stars Annual Meeting of the Simons Foundation for Supported Institutions. The conference will be held from July 20 to 22, 2026, at the University of Pennsylvania, David Rittenhouse Laboratory, located at 209 S 33rd Street, Philadelphia, PA 19104.</p>
+        </div>
 
-    <div class="poster-container">
-        <img src="poster.jpg" alt="Conference Poster">
-    </div>
+        <div class="grid-2">
+            <div class="poster-container">
+                <img src="poster.jpg" alt="Conference Poster">
+            </div>
+            
+            <div class="card">
+                <h3>Event Details</h3>
+                <p><strong>Dates:</strong> July 20-22, 2026</p>
+                <p><strong>Location:</strong><br>University of Pennsylvania<br>David Rittenhouse Laboratory<br>209 S 33rd Street<br>Philadelphia, PA 19104</p>
+                <p><strong>Information:</strong> <a href="http://imsa.miami.edu" target="_blank" style="color: var(--secondary-color);">imsa.miami.edu</a></p>
+                
+                <h3 style="margin-top: 30px;">Program Highlights</h3>
+                <p>The meeting will feature invited talks by leading mathematicians, alongside short talks by young researchers. Please visit the <a href="program.html" style="color: var(--secondary-color);">Program</a> page for forthcoming schedule details.</p>
+            </div>
+        </div>
 
-    <div class="info-box">
-        <h3 class="section-title" style="margin-top:0;">Event Details</h3>
-        <p><strong>Dates:</strong> JULY 20-22, 2026 [cite: 3]</p>
-        <p><strong>Where:</strong> [cite: 4] University of Pennsylvania David Rittenhouse Laboratory [cite: 5], 209 S 33rd Street [cite: 6], Philadelphia, PA 19104 [cite: 7]</p>
-        <p><strong>Additional Information:</strong> For more information visit: imsa.miami.edu [cite: 18]</p>
-    </div>
-
-    <h3 class="section-title">Speakers: [cite: 8]</h3>
-    <div class="speakers-grid">
-        <div class="speaker-item">Carolina Araujo, IMPA [cite: 9]</div>
-        <div class="speaker-item">Leonardo Cavenaghi, ICMS [cite: 9]</div>
-        <div class="speaker-item">Moira Chas, Stony Brook [cite: 9]</div>
-        <div class="speaker-item">Sergei Gukov, Caltech [cite: 9]</div>
-        <div class="speaker-item">Ernesto Lupercio, ICMS/Cinvestav [cite: 10]</div>
-        <div class="speaker-item">Jaqueline Mesquita, UNICAMP [cite: 10]</div>
-        <div class="speaker-item">Tony Pantev, UPENN [cite: 11]</div>
-        <div class="speaker-item">Carlos Alfonso Ruiz Guido, Colegio de Matemáticas Bourbaki [cite: 12]</div>
-        <div class="speaker-item">Dennis Sullivan, Stony Brook/CUNY [cite: 12]</div>
-        <div class="speaker-item">Yuri Tschinkel, CIMS/NYU, Simons Foundation [cite: 13]</div>
-        <div class="speaker-item">Jacob Tsimerman, Toronto [cite: 14]</div>
-        <div class="speaker-item">Claire Voisin, CNRS [cite: 14]</div>
-        <div class="speaker-item">Lauren Williams, Harvard [cite: 15]</div>
-    </div>
-
-    <div class="info-box" style="margin-top: 30px; background: #fff8e1;">
-        <h3 class="section-title" style="margin-top:0;">Additional Program</h3>
-        <p>The meeting will also feature SHORT TALKS BY [cite: 16] YOUNG RESEARCHERS[cite: 17].</p>
+        <div class="card">
+            <h3>Confirmed Speakers</h3>
+            <div class="speakers-grid">
+                <div class="speaker">Carolina Araujo, IMPA</div>
+                <div class="speaker">Leonardo Cavenaghi, ICMS</div>
+                <div class="speaker">Moira Chas, Stony Brook</div>
+                <div class="speaker">Sergei Gukov, Caltech</div>
+                <div class="speaker">Ernesto Lupercio, ICMS/Cinvestav</div>
+                <div class="speaker">Jaqueline Mesquita, UNICAMP</div>
+                <div class="speaker">Tony Pantev, UPENN</div>
+                <div class="speaker">Carlos Alfonso Ruiz Guido, Colegio de Matemáticas Bourbaki</div>
+                <div class="speaker">Dennis Sullivan, Stony Brook/CUNY</div>
+                <div class="speaker">Yuri Tschinkel, CIMS/NYU, Simons Foundation</div>
+                <div class="speaker">Jacob Tsimerman, Toronto</div>
+                <div class="speaker">Claire Voisin, CNRS</div>
+                <div class="speaker">Lauren Williams, Harvard</div>
+            </div>
+        </div>
     </div>
 
     <footer>
-        <p>Supported by the Simons Foundation, ICMS Sofia, SCGP Stony Brook, FAPESP [cite: 20] and IMSA. [cite: 21]</p>
+        <p>Advancing the next generation of mathematical researchers.</p>
+        <p>Supported by the Simons Foundation, ICMS Sofia, SCGP Stony Brook, FAPESP and IMSA.</p>
     </footer>
-
 </body>
 </html>
