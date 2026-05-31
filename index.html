@@ -18,6 +18,7 @@
             --text-color: #333333;
             --card-bg: #ffffff;
             --inst-color: #666666;
+            --alert-color: #cc0000;
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -69,6 +70,26 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             padding: 30px;
             margin-bottom: 30px;
+        }
+        .alert-card {
+            border-left: 6px solid var(--alert-color);
+            background-color: #fff9f9;
+            text-align: center;
+            padding: 25px;
+        }
+        .alert-card h3 {
+            color: var(--alert-color);
+            font-size: 1.6em;
+            border-bottom: none;
+            margin-top: 0;
+            margin-bottom: 5px;
+            padding-bottom: 0;
+        }
+        .alert-card p {
+            color: var(--alert-color);
+            font-weight: bold;
+            font-size: 1.3em;
+            margin: 0;
         }
         .poster-container {
             text-align: center;
@@ -142,12 +163,17 @@
     </header>
     
     <nav>
-    <a href="index.html">Home</a>
-    <a href="program.html">Program</a>
-    <a href="participants.html">Participants</a>
-</nav>
+        <a href="index.html">Home</a>
+        <a href="program.html">Program</a>
+        <a href="participants.html">Participants</a>
+    </nav>
 
     <div class="container">
+        <div class="card alert-card">
+            <h3>July 22nd, 12:00 PM, Auditorium A4</h3>
+            <p>Celebration of Jim Simons and the Scientific Achievements of his Institutes</p>
+        </div>
+
         <div class="card">
             <p>We are pleased to announce the Future Stars Annual Meeting of the Simons Foundation for Supported Institutions. The conference will be held from July 20 to 22, 2026, at the University of Pennsylvania, David Rittenhouse Laboratory, located at 209 S 33rd Street, Philadelphia, PA 19104.</p>
         </div>
