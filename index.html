@@ -85,6 +85,13 @@
             margin-bottom: 5px;
             padding-bottom: 0;
         }
+        .alert-card a {
+            color: var(--alert-color);
+            text-decoration: underline;
+        }
+        .alert-card a:hover {
+            opacity: 0.8;
+        }
         .alert-card p {
             color: var(--alert-color);
             font-weight: bold;
@@ -169,13 +176,15 @@
     </nav>
 
     <div class="container">
+        <!-- Announcement Block -->
         <div class="card alert-card">
-            <h3>July 22nd, 12:00 PM, Auditorium A4</h3>
+            <h3>July 22nd, 12:00 PM, <a href="https://www.google.com/maps/search/?api=1&query=David+Rittenhouse+Laboratory,+209+S+33rd+Street,+Philadelphia,+PA+19104" target="_blank">Auditorium A4</a></h3>
             <p>Celebration of Jim Simons and the Scientific Achievements of his Institutes</p>
         </div>
 
+        <!-- Introductory Text Block -->
         <div class="card">
-            <p>We are pleased to announce the Future Stars Annual Meeting of the Simons Foundation for Supported Institutions. The conference will be held from July 20 to 22, 2026, at the University of Pennsylvania, David Rittenhouse Laboratory, located at 209 S 33rd Street, Philadelphia, PA 19104.</p>
+            <p>We are pleased to announce the Future Stars Annual Meeting of the Simons Foundation for Supported Institutions. The conference will be held from July 20 to 22, 2026, at the University of Pennsylvania, David Rittenhouse Laboratory, located at <a href="https://www.google.com/maps/search/?api=1&query=David+Rittenhouse+Laboratory,+209+S+33rd+Street,+Philadelphia,+PA+19104" target="_blank" style="color: var(--secondary-color); font-weight: bold;">209 S 33rd Street, Philadelphia, PA 19104</a>.</p>
         </div>
 
         <div class="grid-2">
