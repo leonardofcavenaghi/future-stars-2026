@@ -11,7 +11,6 @@
 
     <style>
         :root {
-            /* Simons Foundation specific palette */
             --primary-color: #004b57; 
             --secondary-color: #007a87;
             --background-color: #f4f7f6;
@@ -138,6 +137,27 @@
             font-size: 0.9em;
             color: var(--inst-color);
         }
+        .form-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .form-list li {
+            background: var(--background-color);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border-left: 4px solid var(--primary-color);
+        }
+        .form-list a {
+            display: inline-block;
+            margin-top: 5px;
+            color: var(--secondary-color);
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .form-list a:hover {
+            text-decoration: underline;
+        }
         footer {
             text-align: center;
             padding: 30px 20px;
@@ -176,13 +196,11 @@
     </nav>
 
     <div class="container">
-        <!-- Announcement Block -->
         <div class="card alert-card">
             <h3>July 22nd, 12:00 PM, <a href="https://www.google.com/maps/search/?api=1&query=David+Rittenhouse+Laboratory,+209+S+33rd+Street,+Philadelphia,+PA+19104" target="_blank">Auditorium A4</a></h3>
             <p>Celebration of Jim Simons and the Scientific Achievements of his Institutes</p>
         </div>
 
-        <!-- Introductory Text Block -->
         <div class="card">
             <p>We are pleased to announce the Future Stars Annual Meeting of the Simons Foundation for Supported Institutions. The conference will be held from July 20 to 22, 2026, at the University of Pennsylvania, David Rittenhouse Laboratory, located at <a href="https://www.google.com/maps/search/?api=1&query=David+Rittenhouse+Laboratory,+209+S+33rd+Street,+Philadelphia,+PA+19104" target="_blank" style="color: var(--secondary-color); font-weight: bold;">209 S 33rd Street, Philadelphia, PA 19104</a>.</p>
         </div>
@@ -205,6 +223,36 @@
                 <h3 style="margin-top: 30px;">Program Highlights</h3>
                 <p>The meeting will feature invited talks by leading mathematicians, alongside short talks by young researchers. Please visit the <a href="program.html" style="color: var(--secondary-color);">Program</a> page for forthcoming schedule details.</p>
             </div>
+        </div>
+
+        <div class="card">
+            <h3>Registration and Financial Support</h3>
+            <p>Financial support for this conference is managed and distributed by the Institute of the Mathematical Sciences of the Americas (IMSA). Funding is allocated into two primary categories: participants based in Latin America and participants based outside of Latin America.</p>
+            
+            <div style="border-left: 4px solid var(--alert-color); background-color: #fff9f9; padding: 15px; margin: 20px 0;">
+                <h4 style="color: var(--alert-color); margin-top: 0; margin-bottom: 10px; font-size: 1.1em;">Notice for Latin American Applicants</h4>
+                <p style="margin: 0; font-size: 0.95em;">Applications for funding from individuals residing in Latin America are conditional upon possessing a valid US visa during the application process, or possessing an alternative legal mechanism to enter the United States, such as dual citizenship. <strong>The registration deadline for Latin American participants is June 10, 2026.</strong></p>
+            </div>
+
+            <p>Please utilize the appropriate form below to complete your registration:</p>
+            
+            <ul class="form-list">
+                <li>
+                    <strong>General Registration</strong><br>
+                    For participants who do not require financial support from IMSA.<br>
+                    <a href="https://umcas.wufoo.com/forms/q1vig5oi04gnhik/" target="_blank">Access Form No. 1</a>
+                </li>
+                <li>
+                    <strong>U.S. Participants (Support Requested)</strong><br>
+                    For participants based in the United States who require financial support from IMSA.<br>
+                    <a href="https://umcas.wufoo.com/forms/qsl94ek0dbdj87/" target="_blank">Access Form No. 2</a>
+                </li>
+                <li>
+                    <strong>Latin American Participants (Support Requested)</strong><br>
+                    For participants based in Latin America who require financial support from IMSA. The distinct visa inquiries require a separate processing form.<br>
+                    <a href="https://umcas.wufoo.com/forms/qavar1w06gsrbb/" target="_blank">Access Form No. 3</a>
+                </li>
+            </ul>
         </div>
 
         <div class="card">
