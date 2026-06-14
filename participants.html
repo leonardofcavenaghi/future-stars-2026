@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Participants - Future Stars 2026</title>
+    <meta name="description" content="List of confirmed speakers, panelists, and featured participants for the Future Stars Annual Meeting 2026.">
+    
     <style>
         :root {
             --primary-color: #004b57; 
@@ -11,7 +13,8 @@
             --background-color: #f4f7f6;
             --text-color: #333333;
             --card-bg: #ffffff;
-            --inst-color: #666666;
+            --inst-color: #555555;
+            --border-color: #e1e4e8;
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -53,52 +56,49 @@
             text-decoration: underline;
         }
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 40px auto;
             padding: 0 20px;
-            min-height: 40vh;
         }
         .card {
             background: var(--card-bg);
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            padding: 40px 30px;
+            padding: 40px;
             margin-bottom: 30px;
-            text-align: center;
-        }
-        .card-left {
-            text-align: left;
         }
         h3 {
             color: var(--primary-color);
-            margin-top: 0;
-            font-size: 1.8em;
             border-bottom: 2px solid var(--secondary-color);
             padding-bottom: 8px;
-        }
-        .construction-icon {
-            font-size: 3em;
+            margin-top: 0;
             margin-bottom: 20px;
+            font-size: 1.6em;
         }
-        .speakers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
+        .participant-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
-        .speaker {
-            background: var(--background-color);
-            padding: 15px;
-            border-radius: 6px;
-            border-left: 4px solid var(--secondary-color);
+        .participant-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
         }
-        .speaker-name {
-            font-weight: bold;
-            color: var(--primary-color);
+        .participant-item:last-child {
+            border-bottom: none;
         }
-        .speaker-inst {
-            font-size: 0.9em;
+        .name {
+            font-weight: 600;
+            color: var(--text-color);
+            font-size: 1.05em;
+        }
+        .institution {
             color: var(--inst-color);
+            font-size: 0.95em;
+            text-align: right;
         }
         footer {
             text-align: center;
@@ -106,6 +106,7 @@
             background-color: var(--primary-color);
             color: #ffffff;
             font-size: 0.9em;
+            margin-top: 60px;
         }
         footer a {
             color: #ffffff;
@@ -116,6 +117,17 @@
         }
         footer p {
             margin: 5px 0;
+        }
+        @media (max-width: 600px) {
+            .participant-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+            .institution {
+                text-align: left;
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
@@ -133,28 +145,93 @@
 
     <div class="container">
         <div class="card">
-            <div class="construction-icon">🚧</div>
-            <h3 style="border: none; margin-bottom: 0;">Participant Roster Under Construction</h3>
-            <p>Registration for the conference is ongoing. The complete list of general participants and contributing young researchers will be published here in due course.</p>
-        </div>
-
-        <div class="card card-left">
-            <h3>Confirmed Speakers</h3>
-            <div class="speakers-grid">
-                <div class="speaker"><span class="speaker-name">Carolina Araujo</span>, <span class="speaker-inst">IMPA</span></div>
-                <div class="speaker"><span class="speaker-name">Leonardo Cavenaghi</span>, <span class="speaker-inst">ICMS</span></div>
-                <div class="speaker"><span class="speaker-name">Moira Chas</span>, <span class="speaker-inst">Stony Brook</span></div>
-                <div class="speaker"><span class="speaker-name">Sergei Gukov</span>, <span class="speaker-inst">Caltech</span></div>
-                <div class="speaker"><span class="speaker-name">Ernesto Lupercio</span>, <span class="speaker-inst">ICMS/Cinvestav</span></div>
-                <div class="speaker"><span class="speaker-name">Jaqueline Mesquita</span>, <span class="speaker-inst">UNICAMP</span></div>
-                <div class="speaker"><span class="speaker-name">Tony Pantev</span>, <span class="speaker-inst">UPENN</span></div>
-                <div class="speaker"><span class="speaker-name">Carlos Alfonso Ruiz Guido</span>, <span class="speaker-inst">Colegio de Matemáticas Bourbaki</span></div>
-                <div class="speaker"><span class="speaker-name">Dennis Sullivan</span>, <span class="speaker-inst">Stony Brook/CUNY</span></div>
-                <div class="speaker"><span class="speaker-name">Yuri Tschinkel</span>, <span class="speaker-inst">CIMS/NYU, Simons Foundation</span></div>
-                <div class="speaker"><span class="speaker-name">Jacob Tsimerman</span>, <span class="speaker-inst">Toronto</span></div>
-                <div class="speaker"><span class="speaker-name">Claire Voisin</span>, <span class="speaker-inst">CNRS</span></div>
-                <div class="speaker"><span class="speaker-name">Lauren Williams</span>, <span class="speaker-inst">Harvard</span></div>
-            </div>
+            <h3>Conference Participants</h3>
+            <ul class="participant-list">
+                <li class="participant-item">
+                    <span class="name">Carolina Araujo</span>
+                    <span class="institution">Institute for Pure and Applied Mathematics (IMPA)</span>
+                </li>
+                <li class="participant-item">
+                    <span class="name">Jean-Pierre Bourguignon</span>
+                    <span class="institution">Institut des Hautes Études Scientifiques (IHES)</span>
+                </li>
+                <li class="participant-item">
+                    <span class="name">Leonardo Cavenaghi</span>
+                    <span class="institution">Institute of Mathematics and Computer Science (ICMS)</span>
+                </li>
+                <li class="participant-item">
+                    <span class="name">Moira Chas</span>
+                    <span class="institution">Stony Brook University</span>
+                </li>
+                <li class="participant-item">
+                    <span class="name">Michael Douglas</span>
+                    <span class="institution">Simons Center for Geometry and Physics (SCGP)</span>
+                </li>
+                <li class="participant-item">
+                    <span class="name">Phillip Griffiths</span>
+                    <span class="institution">Institute for Advanced Study (IAS)</span>
+                </li>
+                <li class="participant-item">
+                    <span class="name">Sergei Gukov</span>
+                    <span class="institution">California Institute of Technology (Caltech)</span>
+                </li>
+                <li class="participant-item">
+                    <span class="name">Ludmil Katzarkov</span>
+                    <span class="institution">IMSA & ICMS-Sofia</span>
+                </li>
+                <li class="participant-item">
+                    <span class="name">Ernesto Lupercio</span>
+                    <span class="institution">Cinvestav</span>
+                </li>
+                <li class="participant-item">
+                    <span class="name">Juan Maldacena</span>
+                    <span class="institution">Institute for Advanced Study (IAS)</span>
+                </li>
+                <li class="participant-item">
+                    <span class="name">Jaqueline Mesquita</span>
+                    <span class="institution">University of Campinas (UNICAMP)</span>
+                </li>
+                <li class="participant-item">
+                    <span class="name">John Morgan</span>
+                    <span class="institution">Simons Center for Geometry and Physics (SCGP)</span>
+                </li>
+                <li class="participant-item">
+                    <span class="name">Rob Morris</span>
+                    <span class="institution">Institute for Pure and Applied Mathematics (IMPA)</span>
+                </li>
+                <li class="participant-item">
+                    <span class="name">Tony Pantev</span>
+                    <span class="institution">University of Pennsylvania (UPenn)</span>
+                </li>
+                <li class="participant-item">
+                    <span class="name">Julian Revalski</span>
+                    <span class="institution">Institute of Mathematics and Informatics (ICMS-Sofia)</span>
+                </li>
+                <li class="participant-item">
+                    <span class="name">Carlos Alfonso Ruiz Guido</span>
+                    <span class="institution">Colegio de Matemáticas Bourbaki</span>
+                </li>
+                <li class="participant-item">
+                    <span class="name">Dennis Sullivan</span>
+                    <span class="institution">Stony Brook University & CUNY Graduate Center</span>
+                </li>
+                <li class="participant-item">
+                    <span class="name">Yuri Tschinkel</span>
+                    <span class="institution">Courant Institute (NYU) & Simons Foundation</span>
+                </li>
+                <li class="participant-item">
+                    <span class="name">Jacob Tsimerman</span>
+                    <span class="institution">University of Toronto</span>
+                </li>
+                <li class="participant-item">
+                    <span class="name">Claire Voisin</span>
+                    <span class="institution">Centre National de la Recherche Scientifique (CNRS)</span>
+                </li>
+                <li class="participant-item">
+                    <span class="name">Lauren Williams</span>
+                    <span class="institution">Harvard University</span>
+                </li>
+            </ul>
         </div>
     </div>
 
