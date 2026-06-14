@@ -71,35 +71,44 @@
             padding: 30px;
             margin-bottom: 30px;
         }
-        .alert-card {
+        
+        /* Merged Banner & Profile Section */
+        .combined-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        .combined-banner {
             border-top: 6px solid var(--alert-color);
             background-color: #fff9f9;
             text-align: center;
             padding: 35px 25px;
-            box-shadow: 0 8px 15px rgba(204, 0, 0, 0.08);
+            border-bottom: 1px solid #f8e5e5;
         }
-        .alert-card h3 {
+        .combined-banner h3 {
             color: var(--alert-color);
             font-size: 1.5em;
             border-bottom: none;
-            margin-top: 0;
-            margin-bottom: 5px;
+            margin: 0 0 5px 0;
             padding-bottom: 0;
         }
-        .alert-card a {
+        .combined-banner a {
             color: var(--alert-color);
             text-decoration: underline;
         }
-        .alert-card a:hover {
+        .combined-banner a:hover {
             opacity: 0.8;
         }
-        .alert-card p.alert-main {
+        .combined-banner p.alert-main {
             color: var(--alert-color);
             font-weight: bold;
             font-size: 1.8em;
             line-height: 1.2;
             margin: 10px 0 20px 0;
         }
+
         .poster-container {
             text-align: center;
             margin-bottom: 30px;
@@ -139,11 +148,6 @@
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0,0,0,0.08);
         }
-        .panel-card {
-            background: #ffffff;
-            border: 1px solid rgba(204, 0, 0, 0.2);
-            box-shadow: 0 4px 10px rgba(204, 0, 0, 0.05);
-        }
         .profile-img {
             width: 130px;
             height: 130px;
@@ -153,9 +157,6 @@
             margin-bottom: 15px;
             background-color: #e1e4e8;
             box-shadow: 0 4px 6px rgba(0,0,0,0.08);
-        }
-        .panel-img {
-            border-color: var(--alert-color);
         }
         .profile-name {
             font-weight: bold;
@@ -265,86 +266,84 @@
 
     <div class="container">
         
-        <div class="card alert-card">
-            <h3>July 22nd, 12:00 PM | <a href="https://www.google.com/maps/search/?api=1&query=David+Rittenhouse+Laboratory,+209+S+33rd+Street,+Philadelphia,+PA+19104" target="_blank">Auditorium A4</a></h3>
-            <p class="alert-main">Celebration of Jim Simons and the<br>Scientific Achievements of his Institutes</p>
+        <div class="combined-card">
+            <div class="combined-banner">
+                <h3>July 22nd, 12:00 PM | <a href="https://www.google.com/maps/search/?api=1&query=David+Rittenhouse+Laboratory,+209+S+33rd+Street,+Philadelphia,+PA+19104" target="_blank">Auditorium A4</a></h3>
+                <p class="alert-main">Celebration of Jim Simons and the<br>Scientific Achievements of his Institutes</p>
+                <p style="margin: 0; font-size: 1.1em; color: var(--text-color);">
+                    <strong>The discussion features:</strong> Jean-Pierre Bourguignon (IHES), Phillip Griffiths (IAS), John Morgan (SCGP), and Dennis Sullivan (Stony Brook/CUNY).
+                </p>
+            </div>
             
-            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(204, 0, 0, 0.2);">
-                <p style="margin: 0; font-size: 1.2em; color: var(--text-color); font-weight: bold; letter-spacing: 1px;">THE DISCUSSION FEATURES:</p>
-                
+            <div style="padding: 35px 30px;">
+                <h3 style="text-align: center; border-bottom: none; margin-bottom: 10px;">Featured Participants</h3>
                 <div class="profile-grid">
-                    <div class="profile-card panel-card">
-                        <img src="bourguignon.jpg" alt="Jean-Pierre Bourguignon" class="profile-img panel-img">
+                    <div class="profile-card">
+                        <img src="bourguignon.jpg" alt="Jean-Pierre Bourguignon" class="profile-img">
                         <span class="profile-name">Jean-Pierre Bourguignon</span>
                         <span class="profile-inst">Institut des Hautes Études Scientifiques (IHES)</span>
                         <span class="profile-accolade">Former President of the European Research Council (ERC)</span>
                     </div>
-                    <div class="profile-card panel-card">
-                        <img src="griffiths.jpg" alt="Phillip Griffiths" class="profile-img panel-img">
+                    <div class="profile-card">
+                        <img src="chas.jpg" alt="Moira Chas" class="profile-img">
+                        <span class="profile-name">Moira Chas</span>
+                        <span class="profile-inst">Stony Brook University</span>
+                        <span class="profile-accolade">Co-discoverer of String Topology & Leading Expert in Low-Dimensional Topology</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="douglas.jpg" alt="Michael Douglas" class="profile-img">
+                        <span class="profile-name">Michael Douglas</span>
+                        <span class="profile-inst">Simons Center for Geometry and Physics (SCGP)</span>
+                        <span class="profile-accolade">Sackler Prize Laureate & Fellow of the American Physical Society</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="griffiths.jpg" alt="Phillip Griffiths" class="profile-img">
                         <span class="profile-name">Phillip Griffiths</span>
                         <span class="profile-inst">Institute for Advanced Study (IAS)</span>
                         <span class="profile-accolade">Chern Medalist & Member of the National Academy of Sciences</span>
                     </div>
-                    <div class="profile-card panel-card">
-                        <img src="morgan.jpg" alt="John Morgan" class="profile-img panel-img">
+                    <div class="profile-card">
+                        <img src="katzarkov.jpg" alt="Ludmil Katzarkov" class="profile-img">
+                        <span class="profile-name">Ludmil Katzarkov</span>
+                        <span class="profile-inst">IMSA & ICMS-Sofia</span>
+                        <span class="profile-accolade">Current Director of IMSA & Future Director of the Simons Center for Geometry and Physics (SCGP)</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="lupercio.jpg" alt="Ernesto Lupercio" class="profile-img">
+                        <span class="profile-name">Ernesto Lupercio</span>
+                        <span class="profile-inst">Cinvestav</span>
+                        <span class="profile-accolade">ICTP Ramanujan Prize Winner & Alumnus of the Global Young Academy</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="maldacena.jpg" alt="Juan Maldacena" class="profile-img">
+                        <span class="profile-name">Juan Maldacena</span>
+                        <span class="profile-inst">Institute for Advanced Study (IAS)</span>
+                        <span class="profile-accolade">Chair of the SCGP Scientific Board, Fundamental Physics Prize & Dirac Medalist</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="mesquita.jpg" alt="Jaqueline Mesquita" class="profile-img">
+                        <span class="profile-name">Jaqueline Mesquita</span>
+                        <span class="profile-inst">University of Campinas (UNICAMP)</span>
+                        <span class="profile-accolade">President of the Brazilian Mathematical Society and UMALCA | L'Oréal-UNESCO For Women in Science Awardee</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="morgan.jpg" alt="John Morgan" class="profile-img">
                         <span class="profile-name">John Morgan</span>
                         <span class="profile-inst">Simons Center for Geometry and Physics (SCGP)</span>
                         <span class="profile-accolade">Founding Faculty Member & Member of the National Academy of Sciences</span>
                     </div>
-                    <div class="profile-card panel-card">
-                        <img src="sullivan.jpg" alt="Dennis Sullivan" class="profile-img panel-img">
+                    <div class="profile-card">
+                        <img src="revalski.jpg" alt="Julian Revalski" class="profile-img">
+                        <span class="profile-name">Julian Revalski</span>
+                        <span class="profile-inst">ICMS-Sofia</span>
+                        <span class="profile-accolade">Current Director of ICMS-Sofia & Former President of the Bulgarian Academy of Sciences</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="sullivan.jpg" alt="Dennis Sullivan" class="profile-img">
                         <span class="profile-name">Dennis Sullivan</span>
                         <span class="profile-inst">Stony Brook University & CUNY Graduate Center</span>
                         <span class="profile-accolade">Abel Prize Laureate & Member of the National Academy of Sciences</span>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <h3 style="text-align: center; border-bottom: none; margin-bottom: 10px;">Additional Featured Participants</h3>
-            <div class="profile-grid">
-                <div class="profile-card">
-                    <img src="maldacena.jpg" alt="Juan Maldacena" class="profile-img">
-                    <span class="profile-name">Juan Maldacena</span>
-                    <span class="profile-inst">Institute for Advanced Study (IAS)</span>
-                    <span class="profile-accolade">Chair of the SCGP Scientific Board, Fundamental Physics Prize & Dirac Medalist</span>
-                </div>
-                <div class="profile-card">
-                    <img src="katzarkov.jpg" alt="Ludmil Katzarkov" class="profile-img">
-                    <span class="profile-name">Ludmil Katzarkov</span>
-                    <span class="profile-inst">IMSA & ICMS-Sofia</span>
-                    <span class="profile-accolade">Current Director of IMSA & Future Director of the Simons Center for Geometry and Physics (SCGP)</span>
-                </div>
-                <div class="profile-card">
-                    <img src="mesquita.jpg" alt="Jaqueline Mesquita" class="profile-img">
-                    <span class="profile-name">Jaqueline Mesquita</span>
-                    <span class="profile-inst">University of Campinas (UNICAMP)</span>
-                    <span class="profile-accolade">President of the Brazilian Mathematical Society and UMALCA | L'Oréal-UNESCO For Women in Science Awardee</span>
-                </div>
-                <div class="profile-card">
-                    <img src="lupercio.jpg" alt="Ernesto Lupercio" class="profile-img">
-                    <span class="profile-name">Ernesto Lupercio</span>
-                    <span class="profile-inst">Cinvestav</span>
-                    <span class="profile-accolade">ICTP Ramanujan Prize Winner & Alumnus of the Global Young Academy</span>
-                </div>
-                <div class="profile-card">
-                    <img src="revalski.jpg" alt="Julian Revalski" class="profile-img">
-                    <span class="profile-name">Julian Revalski</span>
-                    <span class="profile-inst">ICMS-Sofia</span>
-                    <span class="profile-accolade">Current Director of ICMS-Sofia & Former President of the Bulgarian Academy of Sciences</span>
-                </div>
-                <div class="profile-card">
-                    <img src="chas.jpg" alt="Moira Chas" class="profile-img">
-                    <span class="profile-name">Moira Chas</span>
-                    <span class="profile-inst">Stony Brook University</span>
-                    <span class="profile-accolade">Co-discoverer of String Topology & Leading Expert in Low-Dimensional Topology</span>
-                </div>
-                <div class="profile-card">
-                    <img src="douglas.jpg" alt="Michael Douglas" class="profile-img">
-                    <span class="profile-name">Michael Douglas</span>
-                    <span class="profile-inst">Simons Center for Geometry and Physics (SCGP)</span>
-                    <span class="profile-accolade">Sackler Prize Laureate & Fellow of the American Physical Society</span>
                 </div>
             </div>
         </div>
