@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Program - Future Stars 2026</title>
+    <meta name="description" content="Conference Schedule for the Future Stars Annual Meeting 2026 at the University of Pennsylvania.">
+    
     <style>
         :root {
-            var(--primary-color): #004b57; 
+            --primary-color: #004b57; 
             --secondary-color: #007a87;
             --background-color: #f4f7f6;
             --text-color: #333333;
             --card-bg: #ffffff;
+            --inst-color: #555555;
+            --border-color: #e1e4e8;
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -52,26 +56,69 @@
             text-decoration: underline;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 40px auto;
             padding: 0 20px;
-            min-height: 40vh;
         }
         .card {
             background: var(--card-bg);
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            padding: 50px 30px;
-            text-align: center;
+            padding: 40px;
+            margin-bottom: 30px;
         }
         h3 {
             color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 8px;
             margin-top: 0;
+            margin-bottom: 20px;
             font-size: 1.8em;
         }
-        .construction-icon {
-            font-size: 3em;
-            margin-bottom: 20px;
+        .session-title {
+            color: var(--secondary-color);
+            font-size: 1.3em;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        .schedule-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .schedule-item {
+            border-left: 4px solid var(--secondary-color);
+            background: #fafbfc;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .time-slot {
+            font-weight: bold;
+            color: var(--primary-color);
+            display: inline-block;
+            min-width: 140px;
+        }
+        .talk-title {
+            display: block;
+            font-style: italic;
+            color: var(--inst-color);
+            margin-top: 5px;
+            padding-left: 140px;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .time-slot {
+                display: block;
+                margin-bottom: 5px;
+            }
+            .talk-title {
+                padding-left: 0;
+            }
         }
         footer {
             text-align: center;
@@ -79,6 +126,7 @@
             background-color: var(--primary-color);
             color: #ffffff;
             font-size: 0.9em;
+            margin-top: 60px;
         }
         footer a {
             color: #ffffff;
@@ -98,18 +146,170 @@
         <h2>Annual Meeting of the Simons Foundation for Supported Institutions</h2>
     </header>
     
-   <nav>
-    <a href="index.html">Home</a>
-    <a href="program.html">Program</a>
-    <a href="participants.html">Participants</a>
-</nav>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="program.html">Program</a>
+        <a href="participants.html">Participants</a>
+    </nav>
 
     <div class="container">
+        
         <div class="card">
-            <div class="construction-icon">🚧</div>
-            <h3>Program Under Construction</h3>
-            <p>The detailed schedule for the Future Stars Annual Meeting is currently being finalized.</p>
-            <p>This page will be updated with the full list of talks, short talks by young researchers, and session times shortly.</p>
+            <h3>Monday, July 20</h3>
+            
+            <div class="session-title">Morning Sessions (Room 4C8)</div>
+            <ul class="schedule-list">
+                <li class="schedule-item">
+                    <span class="time-slot">8:15 – 8:30 am:</span> Opening
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">8:30 – 9:00 am:</span> Analia Victoria Torres (Universidad Nacional de Córdoba and CIEM–CONICET)
+                    <span class="talk-title">Title: A matrix-valued extension of the Hermite–Laguerre correspondence</span>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">9:00 – 9:30 am:</span> Anibal Aravena (UMass Amherst)
+                    <span class="talk-title">Title: Fano visitors</span>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">9:30 – 10:00 am:</span> Crystianne Lilian de Andrade (Unicamp)
+                    <span class="talk-title">Title: Chemotaxis and Reactions in Anomalous Diffusion Dynamics</span>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">10:00 – 10:30 am:</span> Alejandro Tolcachier (CIEM-CONICET and FAMAF-UNC)
+                    <span class="talk-title">Title: Complex solvmanifolds with non-invariant holomorphic trivializing sections of the canonical bundle</span>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">10:30 – 11:00 am:</span> Extended Coffee Break & Open Discussion
+                </li>
+            </ul>
+
+            <div class="session-title">Main Sessions (Room A4)</div>
+            <ul class="schedule-list">
+                <li class="schedule-item">
+                    <span class="time-slot">11:00 am:</span> Opening A4 – Tony Pantev (University of Pennsylvania - UPenn)
+                </li>
+            </ul>
+
+            <div class="session-title">Afternoon Sessions</div>
+            <ul class="schedule-list">
+                <li class="schedule-item">
+                    <span class="time-slot">12:00 pm:</span> Lunch
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">1:00 pm:</span> Abhinav Kumar (Renaissance Technologies)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">2:00 pm:</span> Boris Alexeev
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">3:00 pm:</span> Carlos Alfonso Ruiz Guido (Colegio de Matemáticas Bourbaki)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">4:00 pm:</span> Michael Douglas (Simons Center for Geometry and Physics - SCGP)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">5:00 pm:</span> Ernesto Lupercio (Cinvestav)
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Tuesday, July 21</h3>
+            
+            <div class="session-title">Morning Sessions (Room 4C8)</div>
+            <ul class="schedule-list">
+                <li class="schedule-item">
+                    <span class="time-slot">8:30 – 9:00 am:</span> Samir Albus (University of Miami)
+                    <span class="talk-title">Title: To be determined</span>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">9:00 – 9:30 am:</span> Alexander Vitanov (ICMS-Sofia)
+                    <span class="talk-title">Title: Blowup formula for Quantum Chen-Ruan cohomology</span>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">9:30 – 10:00 am:</span> Rafael Montezuma Pinheiro Cabral (Federal University of Ceará)
+                    <span class="talk-title">Title: Min-max widths associated with distance functions</span>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">10:00 – 10:30 am:</span> Alma Sarai Hernandez Torres (UNAM)
+                    <span class="talk-title">Title: The geometry of the uniform spanning tree in three dimensions</span>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">10:30 – 11:00 am:</span> Extended Coffee Break & Open Discussion
+                </li>
+            </ul>
+
+            <div class="session-title">Main Sessions (Room A4)</div>
+            <ul class="schedule-list">
+                <li class="schedule-item">
+                    <span class="time-slot">11:00 am:</span> Moira Chas (Stony Brook University)
+                </li>
+            </ul>
+
+            <div class="session-title">Afternoon Sessions</div>
+            <ul class="schedule-list">
+                <li class="schedule-item">
+                    <span class="time-slot">12:00 pm:</span> Lunch
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">1:00 pm:</span> Enrique Ruby Becerra (Cinvestav)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">2:00 pm:</span> Leonardo Cavenaghi (ICMS-Sofia & IMI-BAS)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">3:00 pm:</span> Pedro Antonio Muniz Martins (University of Campinas - UNICAMP)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">4:00 pm:</span> Carolina Araujo (Institute for Pure and Applied Mathematics - IMPA)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">5:00 pm:</span> Giovane Paes Galindo Neto (ICMS-Sofia)
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Wednesday, July 22</h3>
+            
+            <div class="session-title">Morning Sessions</div>
+            <ul class="schedule-list">
+                <li class="schedule-item">
+                    <span class="time-slot">8:30 am (Room 4C8):</span> Yuri Tschinkel (Courant Institute, NYU & Simons Foundation)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">9:30 am (Room 4C8):</span> Jaqueline Mesquita (University of Campinas - UNICAMP)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">11:00 am (Room A4):</span> Jacob Tsimerman (University of Toronto)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">11:45 am (Room A4):</span> Dennis Sullivan (Stony Brook University & CUNY Graduate Center)
+                </li>
+                <li class="schedule-item" style="background-color: #fff9f9; border-left-color: var(--alert-color);">
+                    <span class="time-slot" style="color: var(--alert-color);">12:30 – 2:00 pm:</span> <strong>Celebration for J. Simons</strong>
+                </li>
+            </ul>
+
+            <div class="session-title">Afternoon Sessions</div>
+            <ul class="schedule-list">
+                <li class="schedule-item">
+                    <span class="time-slot">2:00 pm:</span> Lauren Williams (Harvard University)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">3:00 pm:</span> Claire Voisin (Centre National de la Recherche Scientifique - CNRS)
+                    <span class="talk-title">Title: Points of zero-cycles of algebraic varieties</span>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">4:00 pm:</span> John Pardon (Simons Center for Geometry and Physics - SCGP)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">5:00 pm:</span> Sergei Gukov (California Institute of Technology - Caltech)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">5:50 pm:</span> Rob Morris (Institute for Pure and Applied Mathematics - IMPA)
+                </li>
+            </ul>
         </div>
     </div>
 
