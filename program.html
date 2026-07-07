@@ -107,7 +107,32 @@
             font-style: italic;
             color: var(--inst-color);
             margin-top: 5px;
-            padding-left: 140px;
+            padding-left: 144px;
+        }
+        .abstract-details {
+            margin-top: 15px;
+            margin-left: 144px;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 12px 15px;
+            font-size: 0.95em;
+        }
+        .abstract-details summary {
+            font-weight: bold;
+            color: var(--secondary-color);
+            cursor: pointer;
+            outline: none;
+        }
+        .abstract-details p {
+            margin: 10px 0 0 0;
+            color: var(--text-color);
+            line-height: 1.5;
+        }
+        .abstract-details ol {
+            margin: 10px 0 0 0;
+            padding-left: 20px;
+            color: var(--text-color);
         }
         
         /* Mobile Responsiveness */
@@ -116,8 +141,9 @@
                 display: block;
                 margin-bottom: 5px;
             }
-            .talk-title {
+            .talk-title, .abstract-details {
                 padding-left: 0;
+                margin-left: 0;
             }
         }
         footer {
@@ -165,14 +191,39 @@
                 <li class="schedule-item">
                     <span class="time-slot">8:30 – 9:00 am:</span> Analia Victoria Torres (Universidad Nacional de Córdoba and CIEM–CONICET)
                     <span class="talk-title">Title: A matrix-valued extension of the Hermite–Laguerre correspondence</span>
+                    <details class="abstract-details">
+                        <summary>View Abstract</summary>
+                        <p>The classical Hermite and Laguerre orthogonal polynomials are related by a quadratic change of variables. The even and odd Hermite polynomials can be expressed in terms of Laguerre polynomials evaluated at <i>x</i><sup>2</sup>. In this talk, an extension of this correspondence to the matrix-valued setting is presented.</p>
+                        <p>Starting from an even Hermite-type matrix weight <i>W</i>(<i>x</i>) = <i>e</i><sup>-<i>x</i><sup>2</sup></sup><i>Z</i>(<i>x</i>), the change of variables <i>y</i> = <i>x</i><sup>2</sup> produces two Laguerre-type matrix weights, corresponding to the even and odd parts of the associated sequence of matrix-valued orthogonal polynomials. This construction provides a systematic method to relate Hermite- and Laguerre-type matrix weights, and it also induces a connection between their algebras of differential operators.</p>
+                        <p>The main concepts behind this construction will be outlined, demonstrating how the matrix-valued setting gives rise to phenomena that do not appear in the classical scalar case, including issues related to noncommutativity, reducibility, and the structure of differential-operator algebras. The talk relies on joint work with Dr. María Inés Pacharoni.</p>
+                    </details>
                 </li>
                 <li class="schedule-item">
                     <span class="time-slot">9:00 – 9:30 am:</span> Anibal Aravena (UMass Amherst)
-                    <span class="talk-title">Title: Fano visitors</span>
+                    <span class="talk-title">Title: The Fano visitor problem for K3 surfaces</span>
+                    <details class="abstract-details">
+                        <summary>View Abstract</summary>
+                        <p>A smooth projective variety is called a Fano visitor if its bounded derived category of coherent sheaves can be embedded into the derived category of a smooth Fano manifold. Motivated by homological mirror symmetry, Bondal posed the question whether every smooth projective variety is a Fano visitor. This talk addresses this question for a general K3 surface. The proof is a consequence of several results concerning a sequence of flips associated to the K3 surface. Its construction combines the work of Bayer and Macrì on the description of the birational geometry of a moduli space of sheaves on a K3 surface through Bridgeland stability conditions, and the study of the fixed locus of antisymplectic involutions on Hyperkähler manifolds by Saccà, Macrì, O'Grady, and Flapan.</p>
+                    </details>
                 </li>
                 <li class="schedule-item">
                     <span class="time-slot">9:30 – 10:00 am:</span> Crystianne Lilian de Andrade (Unicamp)
                     <span class="talk-title">Title: Chemotaxis and Reactions in Anomalous Diffusion Dynamics</span>
+                    <details class="abstract-details">
+                        <summary>View Abstract</summary>
+                        <p>Chemotaxis—the directed movement of cells or organisms in response to chemical gradients—is a fundamental mechanism underlying a wide range of biological processes and is often closely coupled with reaction dynamics. In particular, chemotaxis can significantly enhance and sustain reactions.</p>
+                        <p>While the classical Keller-Segel model [4] has been extensively used to study chemotaxis under standard diffusion assumptions, it fails to capture essential features in environments where chemoattractants, nutrients, or other targets are sparse or rare. In such cases, organisms rely on long-range search strategies, and anomalous diffusion of the superdiffusive type provides a more accurate description of cellular behavior by accounting for nonlocal dispersal and long-range interactions [2, 3].</p>
+                        <p>Motivated by these considerations, we study a Keller-Segel-type model incorporating advection, absorbing reactions, and superdiffusion through the fractional Laplacian. The model arises naturally in the study of broadcast spawning, a fertilization strategy adopted by various benthic invertebrates such as sea urchins, anemones, and corals. Within this framework, we investigate how chemotactic attraction affects reproduction efficiency (reaction rate) in the context of anomalous diffusion of gamete densities, extending the analysis initiated by Kiselev and Ryzhik [5].</p>
+                        <p>This talk presents recent results obtained in paper [1], a joint work with Alexander Kiselev (Duke University).</p>
+                        <p><strong>References:</strong></p>
+                        <ol>
+                            <li>C. L. D. Andrade and A. A. Kiselev. "Chemotaxis and Reactions in Anomalous Diffusion Dynamics". In: SIAM Journal on Mathematical Analysis 58.1 (2026), pp. 35–65.</li>
+                            <li>C. Escudero. "The fractional Keller-Segel model". In: Nonlinearity 19.12 (2006), pp. 2909–2918.</li>
+                            <li>G. Estrada-Rodriguez, H. Gimperlein, and K. J. Painter. "Fractional Patlak-Keller-Segel equations for chemotactic superdiffusion". In: SIAM J. Appl. Math. 78.2 (2018), pp. 1155–1173.</li>
+                            <li>E. F. Keller and L. A. Segel. "Initiation of slime mold aggregation viewed as an instability". In: J. Theoret. Biol. 26.3 (1970), pp. 399–415.</li>
+                            <li>A. Kiselev and L. Ryzhik. "Biomixing by chemotaxis and enhancement of biological reactions". In: Comm. Partial Differential Equations 37.2 (2012), pp. 298–318.</li>
+                        </ol>
+                    </details>
                 </li>
                 <li class="schedule-item">
                     <span class="time-slot">10:00 – 10:30 am:</span> Alejandro Tolcachier (CIEM-CONICET and FAMAF-UNC)
@@ -196,19 +247,19 @@
                     <span class="time-slot">12:00 pm:</span> Lunch
                 </li>
                 <li class="schedule-item">
-                    <span class="time-slot">1:00 pm:</span> Abhinav Kumar (Renaissance Technologies)
+                    <span class="time-slot">12:45 pm:</span> Abhinav Kumar (Renaissance Technologies)
                 </li>
                 <li class="schedule-item">
-                    <span class="time-slot">2:00 pm:</span> Boris Alexeev
+                    <span class="time-slot">1:45 pm:</span> Boris Alexeev (OpenAI)
                 </li>
                 <li class="schedule-item">
-                    <span class="time-slot">3:00 pm:</span> Carlos Alfonso Ruiz Guido (Colegio de Matemáticas Bourbaki)
+                    <span class="time-slot">2:45 pm:</span> Carlos Alfonso Ruiz Guido (Colegio de Matemáticas Bourbaki)
                 </li>
                 <li class="schedule-item">
-                    <span class="time-slot">4:00 pm:</span> Michael Douglas (Simons Center for Geometry and Physics - SCGP)
+                    <span class="time-slot">3:45 pm:</span> Michael Douglas (Simons Center for Geometry and Physics - SCGP)
                 </li>
                 <li class="schedule-item">
-                    <span class="time-slot">5:00 pm:</span> Ernesto Lupercio (Cinvestav)
+                    <span class="time-slot">4:45 pm:</span> Ernesto Lupercio (Cinvestav)
                 </li>
             </ul>
         </div>
@@ -229,6 +280,11 @@
                 <li class="schedule-item">
                     <span class="time-slot">9:30 – 10:00 am:</span> Rafael Montezuma Pinheiro Cabral (Federal University of Ceará)
                     <span class="talk-title">Title: Min-max widths associated with distance functions</span>
+                    <details class="abstract-details">
+                        <summary>View Abstract</summary>
+                        <p>The min-max theory for the area functional is a Morse theory on the space of hypersurfaces contained in a Riemannian manifold. The theory experienced remarkable developments and found deep applications in differential geometry. The min-max widths are invariants that naturally emerge from this theory as special critical values of the area. It is very interesting to compare these numbers to other geometric quantities, such as the volume and curvature bounds of the ambient manifold.</p>
+                        <p>In this talk, a new notion of min-max width associated with the distance function is discussed, together with several comparison results. More precisely, a Morse–Lusternik–Schnirelmann theory is developed for the distance between two points on a smoothly embedded circle in a complete Riemannian manifold. This framework leads naturally to a definition of width that extends the classical notion of width for plane curves. Curves that may be regarded as Riemannian analogues of plane curves of constant width are further investigated, establishing characterization results and geometric properties. Finally, inequalities relating this new width to other geometric invariants are presented, alongside rigidity results characterizing the cases of equality.</p>
+                    </details>
                 </li>
                 <li class="schedule-item">
                     <span class="time-slot">10:00 – 10:30 am:</span> Alma Sarai Hernandez Torres (UNAM)
@@ -252,19 +308,19 @@
                     <span class="time-slot">12:00 pm:</span> Lunch
                 </li>
                 <li class="schedule-item">
-                    <span class="time-slot">1:00 pm:</span> Enrique Ruby Becerra (Cinvestav)
+                    <span class="time-slot">12:45 pm:</span> Enrique Ruby Becerra (Cinvestav)
                 </li>
                 <li class="schedule-item">
-                    <span class="time-slot">2:00 pm:</span> Leonardo Cavenaghi (ICMS-Sofia & IMI-BAS)
+                    <span class="time-slot">1:45 pm:</span> Pedro Antonio Muniz Martins (University of Campinas - UNICAMP)
                 </li>
                 <li class="schedule-item">
-                    <span class="time-slot">3:00 pm:</span> Pedro Antonio Muniz Martins (University of Campinas - UNICAMP)
+                    <span class="time-slot">2:45 pm:</span> Leonardo Cavenaghi (ICMS-Sofia & IMI-BAS)
                 </li>
                 <li class="schedule-item">
-                    <span class="time-slot">4:00 pm:</span> Carolina Araujo (Institute for Pure and Applied Mathematics - IMPA)
+                    <span class="time-slot">3:45 pm:</span> Carolina Araujo (Institute for Pure and Applied Mathematics - IMPA)
                 </li>
                 <li class="schedule-item">
-                    <span class="time-slot">5:00 pm:</span> Giovane Paes Galindo Neto (ICMS-Sofia)
+                    <span class="time-slot">4:45 pm:</span> Giovane Paes Galindo Neto (ICMS-Sofia)
                 </li>
             </ul>
         </div>
@@ -299,6 +355,11 @@
                 <li class="schedule-item">
                     <span class="time-slot">3:00 pm:</span> Claire Voisin (Centre National de la Recherche Scientifique - CNRS)
                     <span class="talk-title">Title: Points of zero-cycles of algebraic varieties</span>
+                    <details class="abstract-details">
+                        <summary>View Abstract</summary>
+                        <p>An algebraic variety <i>X</i> is defined by polynomial equations in an ambient space. The defining equations have coefficients in a field <i>K</i>. When <i>K</i> is not algebraically closed, there might be no points of <i>X</i> defined over <i>K</i>, but there are always points defined over finite extensions of <i>K</i>, if <i>X</i> is non-empty. This presentation introduces the Chow group of zero-cycles of <i>X</i>, which is built on these points and provides a partial method for computing them, alongside its universal Chow group.</p>
+                        <p>The Chow group CH<sub>0</sub>(<i>X</i>) of zero-cycles on <i>X</i> contains significant information. If the field <i>K</i> is the field of complex numbers, it is established that it relates to holomorphic forms on <i>X</i> (Mumford). Over non-algebraically closed fields, the universal Chow group of zero-cycles is related to rationality properties of <i>X</i>. The discussion covers the notion of Mumford finite versus infinite dimensionality of CH<sub>0</sub> and, on the arithmetic side, the recently developed notion of boundedness versus unboundedness of CH<sub>0</sub>. Related boundedness versus unboundedness statements concerning points on Fano hypersurfaces will also be presented.</p>
+                    </details>
                 </li>
                 <li class="schedule-item">
                     <span class="time-slot">4:00 pm:</span> John Pardon (Simons Center for Geometry and Physics - SCGP)
