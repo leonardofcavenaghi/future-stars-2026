@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Participants - Future Stars 2026</title>
-    <meta name="description" content="List of confirmed speakers, panelists, and featured participants for the Future Stars Annual Meeting 2026.">
+    <title>Program - Future Stars 2026</title>
+    <meta name="description" content="Conference Schedule for the Future Stars Annual Meeting 2026 at the University of Pennsylvania.">
     
     <style>
         :root {
@@ -73,32 +73,78 @@
             padding-bottom: 8px;
             margin-top: 0;
             margin-bottom: 20px;
-            font-size: 1.6em;
+            font-size: 1.8em;
         }
-        .participant-list {
-            list-style-type: none;
+        .session-title {
+            color: var(--secondary-color);
+            font-size: 1.3em;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        .schedule-list {
+            list-style: none;
             padding: 0;
             margin: 0;
         }
-        .participant-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 0;
-            border-bottom: 1px solid var(--border-color);
+        .schedule-item {
+            border-left: 4px solid var(--secondary-color);
+            background: #fafbfc;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
-        .participant-item:last-child {
-            border-bottom: none;
+        .time-slot {
+            font-weight: bold;
+            color: var(--primary-color);
+            display: inline-block;
+            min-width: 140px;
         }
-        .name {
-            font-weight: 600;
-            color: var(--text-color);
-            font-size: 1.05em;
-        }
-        .institution {
+        .talk-title {
+            display: block;
+            font-style: italic;
             color: var(--inst-color);
+            margin-top: 5px;
+            padding-left: 144px;
+        }
+        .abstract-details {
+            margin-top: 15px;
+            margin-left: 144px;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 12px 15px;
             font-size: 0.95em;
-            text-align: right;
+        }
+        .abstract-details summary {
+            font-weight: bold;
+            color: var(--secondary-color);
+            cursor: pointer;
+            outline: none;
+        }
+        .abstract-details p {
+            margin: 10px 0 0 0;
+            color: var(--text-color);
+            line-height: 1.5;
+        }
+        .abstract-details ol {
+            margin: 10px 0 0 0;
+            padding-left: 20px;
+            color: var(--text-color);
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .time-slot {
+                display: block;
+                margin-bottom: 5px;
+            }
+            .talk-title, .abstract-details {
+                padding-left: 0;
+                margin-left: 0;
+            }
         }
         footer {
             text-align: center;
@@ -118,17 +164,6 @@
         footer p {
             margin: 5px 0;
         }
-        @media (max-width: 600px) {
-            .participant-item {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 4px;
-            }
-            .institution {
-                text-align: left;
-                font-size: 0.9em;
-            }
-        }
     </style>
 </head>
 <body>
@@ -144,80 +179,251 @@
     </nav>
 
     <div class="container">
+        
         <div class="card">
-            <h3>Conference Participants</h3>
-            <ul class="participant-list">
-                <li class="participant-item"><span class="name">Abhinav Kumar</span><span class="institution">Renaissance Technologies</span></li>
-                <li class="participant-item"><span class="name">Alejandro Tolcachier</span><span class="institution">CIEM-CONICET & FAMAF-UNC</span></li>
-                <li class="participant-item"><span class="name">Alex Rodriguez</span><span class="institution">Stony Brook University</span></li>
-                <li class="participant-item"><span class="name">Alexander Vitanov</span><span class="institution">ICMS-Sofia</span></li>
-                <li class="participant-item"><span class="name">Alma Sarai Hernandez Torres</span><span class="institution">UNAM</span></li>
-                <li class="participant-item"><span class="name">Analia Victoria Torres</span><span class="institution">Universidad Nacional de Córdoba & CIEM-CONICET</span></li>
-                <li class="participant-item"><span class="name">Anibal Aravena</span><span class="institution">UMass Amherst</span></li>
-                <li class="participant-item"><span class="name">Bernardo Melo de Carvalho</span><span class="institution">National Laboratory for Scientific Computing (LNCC)</span></li>
-                <li class="participant-item"><span class="name">Boris Alexeev</span><span class="institution">OpenAI</span></li>
-                <li class="participant-item"><span class="name">Boris Georgiev</span><span class="institution">Google DeepMind</span></li>
-                <li class="participant-item"><span class="name">Carlos Alfonso Ruiz Guido</span><span class="institution">Colegio de Matemáticas Bourbaki</span></li>
-                <li class="participant-item"><span class="name">Carolina Araujo</span><span class="institution">Institute for Pure and Applied Mathematics (IMPA)</span></li>
-                <li class="participant-item"><span class="name">Ceyhun Elmacioglu</span><span class="institution">Stony Brook University</span></li>
-                <li class="participant-item"><span class="name">Claire Voisin</span><span class="institution">Centre National de la Recherche Scientifique (CNRS)</span></li>
-                <li class="participant-item"><span class="name">Crystianne Lilian de Andrade</span><span class="institution">University of Campinas (UNICAMP)</span></li>
-                <li class="participant-item"><span class="name">David Spergel</span><span class="institution">Simons Foundation</span></li>
-                <li class="participant-item"><span class="name">Dennis Sullivan</span><span class="institution">Stony Brook University & CUNY Graduate Center</span></li>
-                <li class="participant-item"><span class="name">Diego Olguín Wende</span><span class="institution">Universidad de Chile</span></li>
-                <li class="participant-item"><span class="name">Edhin Mamani</span><span class="institution">Federal University of Rio de Janeiro (UFRJ)</span></li>
-                <li class="participant-item"><span class="name">Edison Jessie Vazquez Gordillo</span><span class="institution">Cinvestav</span></li>
-                <li class="participant-item"><span class="name">Enrique Ruby Becerra</span><span class="institution">Cinvestav</span></li>
-                <li class="participant-item"><span class="name">Ernesto Lupercio</span><span class="institution">Cinvestav</span></li>
-                <li class="participant-item"><span class="name">Gabriel Ponce</span><span class="institution">University of São Paulo (USP)</span></li>
-                <li class="participant-item"><span class="name">Giovane Paes Galindo Neto</span><span class="institution">ICMS-Sofia</span></li>
-                <li class="participant-item"><span class="name">Héctor Hugo García Compeán</span><span class="institution">Cinvestav</span></li>
-                <li class="participant-item"><span class="name">Jacob Tsimerman</span><span class="institution">University of Toronto</span></li>
-                <li class="participant-item"><span class="name">Jaqueline Mesquita</span><span class="institution">University of Campinas (UNICAMP)</span></li>
-                <li class="participant-item"><span class="name">Jean-Pierre Bourguignon (Virtual)</span><span class="institution">Institut des Hautes Études Scientifiques (IHES)</span></li>
-                <li class="participant-item"><span class="name">Jeffry Fuqua</span><span class="institution">Institute of the Mathematical Sciences of the Americas (IMSA)</span></li>
-                <li class="participant-item"><span class="name">Jhoan Sebastian Baez Acevedo</span><span class="institution">Universidad de Chile</span></li>
-                <li class="participant-item"><span class="name">João Fernando da Cunha Nariyoshi</span><span class="institution">University of São Paulo (USP)</span></li>
-                <li class="participant-item"><span class="name">John Morgan</span><span class="institution">Simons Center for Geometry and Physics (SCGP)</span></li>
-                <li class="participant-item"><span class="name">John Pardon</span><span class="institution">Simons Center for Geometry and Physics (SCGP)</span></li>
-                <li class="participant-item"><span class="name">Jose Yanez</span><span class="institution">Universidad Técnica Federico Santa María</span></li>
-                <li class="participant-item"><span class="name">José Eduardo Simental Rodríguez</span><span class="institution">UNAM</span></li>
-                <li class="participant-item"><span class="name">Juan Maldacena</span><span class="institution">Institute for Advanced Study (IAS)</span></li>
-                <li class="participant-item"><span class="name">Julian Revalski</span><span class="institution">Institute of Mathematics and Informatics (ICMS-Sofia)</span></li>
-                <li class="participant-item"><span class="name">Lauren Williams</span><span class="institution">Harvard University</span></li>
-                <li class="participant-item"><span class="name">Leonardo Cavenaghi</span><span class="institution">ICMS-Sofia & IMI-BAS</span></li>
-                <li class="participant-item"><span class="name">Luccas Cassimiro Campos</span><span class="institution">Universidade Federal de Minas Gerais (UFMG)</span></li>
-                <li class="participant-item"><span class="name">Ludmil Katzarkov</span><span class="institution">IMSA & ICMS-Sofia</span></li>
-                <li class="participant-item"><span class="name">Luis Álvarez-Gaumé</span><span class="institution">Simons Center for Geometry and Physics (SCGP)</span></li>
-                <li class="participant-item"><span class="name">Luis Cristobal Núñez Betancourt</span><span class="institution">CIMAT</span></li>
-                <li class="participant-item"><span class="name">Marco Antônio de Freitas Contessoto</span><span class="institution">UNESP</span></li>
-                <li class="participant-item"><span class="name">Marilyn Simons</span><span class="institution">Simons Foundation</span></li>
-                <li class="participant-item"><span class="name">Martín Axel Blufstein</span><span class="institution">Universidad de Buenos Aires & CONICET</span></li>
-                <li class="participant-item"><span class="name">Maurício Rossetto Corrêa</span><span class="institution">University of São Paulo (USP)</span></li>
-                <li class="participant-item"><span class="name">Melissa de Sousa Luiz</span><span class="institution">Universidade de Brasília (UnB)</span></li>
-                <li class="participant-item"><span class="name">Michael Douglas</span><span class="institution">Simons Center for Geometry and Physics (SCGP)</span></li>
-                <li class="participant-item"><span class="name">Milena Ferraz Silva Brockhof</span><span class="institution">University of Campinas (UNICAMP)</span></li>
-                <li class="participant-item"><span class="name">Moira Chas</span><span class="institution">Stony Brook University</span></li>
-                <li class="participant-item"><span class="name">Nick Chakraborty</span><span class="institution">Stony Brook University</span></li>
-                <li class="participant-item"><span class="name">Pedro Antonio Muniz Martins</span><span class="institution">University of Campinas (UNICAMP)</span></li>
-                <li class="participant-item"><span class="name">Pedro Henrique Muller Bortolucci</span><span class="institution">Universidade Federal de São Carlos (UFSCar)</span></li>
-                <li class="participant-item"><span class="name">Pedro Olivares Sánchez</span><span class="institution">Colegio de Matemáticas Bourbaki</span></li>
-                <li class="participant-item"><span class="name">Phillip Griffiths (Virtual)</span><span class="institution">Institute for Advanced Study (IAS)</span></li>
-                <li class="participant-item"><span class="name">Rafael Montezuma Pinheiro Cabral</span><span class="institution">Federal University of Ceará (UFC)</span></li>
-                <li class="participant-item"><span class="name">Renzo Scarpelli Cabral de Bragança</span><span class="institution">Universidade Federal de Minas Gerais (UFMG)</span></li>
-                <li class="participant-item"><span class="name">Rob Morris</span><span class="institution">Institute for Pure and Applied Mathematics (IMPA)</span></li>
-                <li class="participant-item"><span class="name">Samir Albus</span><span class="institution">University of Miami</span></li>
-                <li class="participant-item"><span class="name">Sergei Gukov</span><span class="institution">California Institute of Technology (Caltech)</span></li>
-                <li class="participant-item"><span class="name">Shuhao Li</span><span class="institution">Stony Brook University</span></li>
-                <li class="participant-item"><span class="name">Spencer Cattalani</span><span class="institution">Stony Brook University</span></li>
-                <li class="participant-item"><span class="name">Stephen Della Pietra</span><span class="institution">Renaissance Technologies</span></li>
-                <li class="participant-item"><span class="name">Tatiana Danelon de Assis</span><span class="institution">Federal University of Juiz de Fora (UFJF)</span></li>
-                <li class="participant-item"><span class="name">Tiago Francisco Pinheiro Gomes</span><span class="institution">Aeronautics Institute of Technology (ITA)</span></li>
-                <li class="participant-item"><span class="name">Tony Pantev</span><span class="institution">University of Pennsylvania (UPenn)</span></li>
-                <li class="participant-item"><span class="name">Velichka Milousheva</span><span class="institution">Institute of Mathematics and Informatics (IMI-BAS)</span></li>
-                <li class="participant-item"><span class="name">Yuri Tschinkel</span><span class="institution">Courant Institute (NYU) & Simons Foundation</span></li>
-                <li class="participant-item"><span class="name">Ze Yun</span><span class="institution">Stony Brook University</span></li>
-                <li class="participant-item"><span class="name">Zhulei Pan</span><span class="institution">Stony Brook University</span></li>
+            <h3>Monday, July 20</h3>
+            
+            <div class="session-title">Morning Sessions (Room 4C8)</div>
+            <ul class="schedule-list">
+                <li class="schedule-item">
+                    <span class="time-slot">8:15 – 8:30 am:</span> Opening
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">8:30 – 9:00 am:</span> Analia Victoria Torres (Universidad Nacional de Córdoba and CIEM–CONICET)
+                    <span class="talk-title">Title: A matrix-valued extension of the Hermite–Laguerre correspondence</span>
+                    <details class="abstract-details">
+                        <summary>View Abstract</summary>
+                        <p>The classical Hermite and Laguerre orthogonal polynomials are related by a quadratic change of variables. The even and odd Hermite polynomials can be expressed in terms of Laguerre polynomials evaluated at <i>x</i><sup>2</sup>. In this talk, an extension of this correspondence to the matrix-valued setting is presented.</p>
+                        <p>Starting from an even Hermite-type matrix weight <i>W</i>(<i>x</i>) = <i>e</i><sup>-<i>x</i><sup>2</sup></sup><i>Z</i>(<i>x</i>), the change of variables <i>y</i> = <i>x</i><sup>2</sup> produces two Laguerre-type matrix weights, corresponding to the even and odd parts of the associated sequence of matrix-valued orthogonal polynomials. This construction provides a systematic method to relate Hermite- and Laguerre-type matrix weights, and it also induces a connection between their algebras of differential operators.</p>
+                        <p>The main concepts behind this construction will be outlined, demonstrating how the matrix-valued setting gives rise to phenomena that do not appear in the classical scalar case, including issues related to noncommutativity, reducibility, and the structure of differential-operator algebras. The talk relies on joint work with Dr. María Inés Pacharoni.</p>
+                    </details>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">9:00 – 9:30 am:</span> Anibal Aravena (UMass Amherst)
+                    <span class="talk-title">Title: The Fano visitor problem for K3 surfaces</span>
+                    <details class="abstract-details">
+                        <summary>View Abstract</summary>
+                        <p>A smooth projective variety is called a Fano visitor if its bounded derived category of coherent sheaves can be embedded into the derived category of a smooth Fano manifold. Motivated by homological mirror symmetry, Bondal posed the question whether every smooth projective variety is a Fano visitor. This talk addresses this question for a general K3 surface. The proof is a consequence of several results concerning a sequence of flips associated to the K3 surface. Its construction combines the work of Bayer and Macrì on the description of the birational geometry of a moduli space of sheaves on a K3 surface through Bridgeland stability conditions, and the study of the fixed locus of antisymplectic involutions on Hyperkähler manifolds by Saccà, Macrì, O'Grady, and Flapan.</p>
+                    </details>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">9:30 – 10:00 am:</span> Crystianne Lilian de Andrade (Unicamp)
+                    <span class="talk-title">Title: Chemotaxis and Reactions in Anomalous Diffusion Dynamics</span>
+                    <details class="abstract-details">
+                        <summary>View Abstract</summary>
+                        <p>Chemotaxis—the directed movement of cells or organisms in response to chemical gradients—is a fundamental mechanism underlying a wide range of biological processes and is often closely coupled with reaction dynamics. In particular, chemotaxis can significantly enhance and sustain reactions.</p>
+                        <p>While the classical Keller-Segel model [4] has been extensively used to study chemotaxis under standard diffusion assumptions, it fails to capture essential features in environments where chemoattractants, nutrients, or other targets are sparse or rare. In such cases, organisms rely on long-range search strategies, and anomalous diffusion of the superdiffusive type provides a more accurate description of cellular behavior by accounting for nonlocal dispersal and long-range interactions [2, 3].</p>
+                        <p>Motivated by these considerations, we study a Keller-Segel-type model incorporating advection, absorbing reactions, and superdiffusion through the fractional Laplacian. The model arises naturally in the study of broadcast spawning, a fertilization strategy adopted by various benthic invertebrates such as sea urchins, anemones, and corals. Within this framework, we investigate how chemotactic attraction affects reproduction efficiency (reaction rate) in the context of anomalous diffusion of gamete densities, extending the analysis initiated by Kiselev and Ryzhik [5].</p>
+                        <p>This talk presents recent results obtained in paper [1], a joint work with Alexander Kiselev (Duke University).</p>
+                        <p><strong>References:</strong></p>
+                        <ol>
+                            <li>C. L. D. Andrade and A. A. Kiselev. "Chemotaxis and Reactions in Anomalous Diffusion Dynamics". In: SIAM Journal on Mathematical Analysis 58.1 (2026), pp. 35–65.</li>
+                            <li>C. Escudero. "The fractional Keller-Segel model". In: Nonlinearity 19.12 (2006), pp. 2909–2918.</li>
+                            <li>G. Estrada-Rodriguez, H. Gimperlein, and K. J. Painter. "Fractional Patlak-Keller-Segel equations for chemotactic superdiffusion". In: SIAM J. Appl. Math. 78.2 (2018), pp. 1155–1173.</li>
+                            <li>E. F. Keller and L. A. Segel. "Initiation of slime mold aggregation viewed as an instability". In: J. Theoret. Biol. 26.3 (1970), pp. 399–415.</li>
+                            <li>A. Kiselev and L. Ryzhik. "Biomixing by chemotaxis and enhancement of biological reactions". In: Comm. Partial Differential Equations 37.2 (2012), pp. 298–318.</li>
+                        </ol>
+                    </details>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">10:00 – 10:30 am:</span> Alejandro Tolcachier (CIEM-CONICET and FAMAF-UNC)
+                    <span class="talk-title">Title: Complex solvmanifolds with non-invariant holomorphic trivializing sections of the canonical bundle</span>
+                    <details class="abstract-details">
+                        <summary>View Abstract</summary>
+                        <p>Complex manifolds with holomorphically trivial canonical bundles play a significant role in complex geometry and theoretical physics. In the non-Kähler setting, they provide examples of manifolds with vanishing first Bott-Chern class, frequently referred to as non-Kähler Calabi–Yau manifolds. It is established that every complex nilmanifold (a compact quotient of a nilpotent Lie group by a lattice equipped with an invariant complex structure) admits an invariant holomorphic trivializing section of its canonical bundle. This property does not naturally extend to complex solvmanifolds.</p>
+                        <p>This presentation introduces examples of complex solvmanifolds whose canonical bundles are holomorphically trivial but admit no invariant holomorphic trivializing section, thereby disproving a previously asserted result in the literature. A characterization of the existence of invariant sections is discussed, alongside a description of an obstruction to the triviality and torsion of the canonical bundle. Finally, applications to hypercomplex geometry and recent classification results in dimension six are detailed, including an example absent from prior classifications. This presentation is based on joint work with Adrián Andrada (Universidad Nacional de Córdoba) and subsequent independent research.</p>
+                    </details>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">10:30 – 11:00 am:</span> Extended Coffee Break & Open Discussion
+                </li>
+            </ul>
+
+            <div class="session-title">Main Sessions (Room A4)</div>
+            <ul class="schedule-list">
+                <li class="schedule-item">
+                    <span class="time-slot">11:00 am:</span> Opening A4 – Tony Pantev (University of Pennsylvania - UPenn)
+                </li>
+            </ul>
+
+            <div class="session-title">Afternoon Sessions (Room A4)</div>
+            <ul class="schedule-list">
+                <li class="schedule-item">
+                    <span class="time-slot">12:00 pm:</span> Lunch
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">12:45 pm:</span> Abhinav Kumar (Renaissance Technologies)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">1:45 pm:</span> Boris Alexeev (OpenAI)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">2:45 pm:</span> Carlos Alfonso Ruiz Guido (Colegio de Matemáticas Bourbaki)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">3:45 pm:</span> Michael Douglas (Simons Center for Geometry and Physics - SCGP)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">4:45 pm:</span> Ernesto Lupercio (Cinvestav)
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Tuesday, July 21</h3>
+            
+            <div class="session-title">Morning Sessions (Room 4C8)</div>
+            <ul class="schedule-list">
+                <li class="schedule-item">
+                    <span class="time-slot">8:30 – 9:00 am:</span> Samir Albus (University of Miami)
+                    <span class="talk-title">Title: Atoms, intermediate Jacobian, asymptotics and MMP</span>
+                    <details class="abstract-details">
+                        <summary>View Abstract</summary>
+                        <p>This presentation discusses a possible refinement of the minimal model program, in which birational types are recorded taking into account (possibly mixed) Hodge atoms, the intermediate Jacobian, the asymptotic invariants of singular varieties and of their resolutions, and a defect term measuring the failure of the associated semi-orthogonal decomposition to be realized by smooth centers. The motivation, basic formalism, and its relation with divisorial contractions, flips, and flops are described, alongside proposed applications to questions concerning rationality.</p>
+                    </details>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">9:00 – 9:30 am:</span> Alexander Vitanov (ICMS-Sofia)
+                    <span class="talk-title">Title: Blowup formula for Quantum Chen-Ruan cohomology</span>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">9:30 – 10:00 am:</span> Rafael Montezuma Pinheiro Cabral (Federal University of Ceará)
+                    <span class="talk-title">Title: Min-max widths associated with distance functions</span>
+                    <details class="abstract-details">
+                        <summary>View Abstract</summary>
+                        <p>The min-max theory for the area functional is a Morse theory on the space of hypersurfaces contained in a Riemannian manifold. The theory experienced remarkable developments and found deep applications in differential geometry. The min-max widths are invariants that naturally emerge from this theory as special critical values of the area. It is very interesting to compare these numbers to other geometric quantities, such as the volume and curvature bounds of the ambient manifold.</p>
+                        <p>In this talk, a new notion of min-max width associated with the distance function is discussed, together with several comparison results. More precisely, a Morse–Lusternik–Schnirelmann theory is developed for the distance between two points on a smoothly embedded circle in a complete Riemannian manifold. This framework leads naturally to a definition of width that extends the classical notion of width for plane curves. Curves that may be regarded as Riemannian analogues of plane curves of constant width are further investigated, establishing characterization results and geometric properties. Finally, inequalities relating this new width to other geometric invariants are presented, alongside rigidity results characterizing the cases of equality.</p>
+                    </details>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">10:00 – 10:30 am:</span> Alma Sarai Hernandez Torres (UNAM)
+                    <span class="talk-title">Title: The geometry of the uniform spanning tree in three dimensions</span>
+                    <details class="abstract-details">
+                        <summary>View Abstract</summary>
+                        <p>The uniform spanning tree (UST) is the random subgraph obtained by selecting, uniformly at random, one of the spanning trees of an underlying finite graph; by taking weak limits, the model extends to infinite graphs. Despite this elementary description, the large-scale behavior of the UST is remarkably rich, offering a tractable pathway into the behavior of critical models in statistical physics. This presentation addresses the three-dimensional case, which has long posed major challenges across mathematical physics. While the existence of the scaling limit for the three-dimensional UST has been established, the resulting continuum tree remains far from understood.</p>
+                        <p>Recent progress on the geometry of the scaling limit of the UST on <i>Z</i><sup>3</sup> is detailed. The results reveal a delicate interplay between the intrinsic geometry of the limiting tree and the Euclidean geometry of its embedded image, where points that are close in the tree can be far apart in space. (Based on joint works with Omer Angel, David Croydon, Xinyi Li, Runsheng Liu, Xiangyi Liu, and Daisuke Shiraishi).</p>
+                    </details>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">10:30 – 11:00 am:</span> Extended Coffee Break & Open Discussion
+                </li>
+            </ul>
+
+            <div class="session-title">Main Sessions (Room A4)</div>
+            <ul class="schedule-list">
+                <li class="schedule-item">
+                    <span class="time-slot">11:00 am:</span> Moira Chas (Stony Brook University)
+                </li>
+            </ul>
+
+            <div class="session-title">Afternoon Sessions (Room A4)</div>
+            <ul class="schedule-list">
+                <li class="schedule-item">
+                    <span class="time-slot">12:00 pm:</span> Lunch
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">12:45 pm:</span> Enrique Ruby Becerra (Cinvestav)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">1:45 pm:</span> Leonardo Cavenaghi (ICMS-Sofia & IMI-BAS)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">2:45 pm:</span> Pedro Antonio Muniz Martins (University of Campinas - UNICAMP)
+                    <span class="talk-title">Title: Atoms of complete intersections on flags varieties, part I.</span>
+                    <details class="abstract-details">
+                        <summary>View Abstract</summary>
+                        <p>Gromov-Witten invariants can be computed in GKM spaces via torus localization methods. These invariants can subsequently determine the eigenvalues of the small quantum multiplication by the first Chern class. This presentation reviews the foundational notions of GKM spaces and introduces the concept of Hodge atoms, as defined by Katzarkov, Kontsevich, Pantev, and Yu. The implementation of localization techniques to compute the atoms of complete intersections on flag varieties is then detailed. (Joint work with Leonardo Cavenaghi, Giovane Galindo, and Ludmil Katzarkov).</p>
+                    </details>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">3:45 pm:</span> Carolina Araujo (Institute for Pure and Applied Mathematics - IMPA)
+                    <span class="talk-title">Title: Symmetries in Algebraic Geometry</span>
+                    <details class="abstract-details">
+                        <summary>View Abstract</summary>
+                        <p>Symmetry plays a fundamental role in geometry. This presentation explores several notions of symmetry in algebraic geometry, beginning with automorphisms, whose structure often reflects important features of a projective variety. From the perspective of birational geometry, however, automorphisms are too restrictive, leading naturally to the broader notion of birational self-maps. Birational self-maps of projective space are known as Cremona transformations.</p>
+                        <p>Understanding the structure of the Cremona group is a classical problem in algebraic geometry, dating back to the nineteenth century, and many fundamental questions remain open. The discussion concludes with an overview of ongoing research on connections between automorphisms of hypersurfaces and Cremona transformations.</p>
+                    </details>
+                </li>
+            </ul>
+
+            <div class="session-title">Late Afternoon Sessions (Room A6)</div>
+            <ul class="schedule-list">
+                <li class="schedule-item">
+                    <span class="time-slot">5:00 pm:</span> Giovane Paes Galindo Neto (ICMS-Sofia)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">6:00 pm:</span> Boris Georgiev (Google DeepMind)
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Wednesday, July 22</h3>
+            
+            <div class="session-title">Morning Sessions</div>
+            <ul class="schedule-list">
+                <li class="schedule-item">
+                    <span class="time-slot">8:30 am (Room 4C8):</span> Yuri Tschinkel (Courant Institute, NYU & Simons Foundation)
+                    <span class="talk-title">Title: Equivariant birational geometry</span>
+                    <details class="abstract-details">
+                        <summary>View Abstract</summary>
+                        <p>This presentation details new results and constructions in birational geometry in the presence of actions of finite groups. (Joint work with B. Hassett, A. Kresch, I. Cheltsov, and Zh. Zhang).</p>
+                    </details>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">9:30 am (Room 4C8):</span> Jaqueline Mesquita (University of Campinas - UNICAMP)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">11:00 am (Room A4):</span> Jacob Tsimerman (University of Toronto)
+                    <span class="talk-title">Title: Second main terms for asymptotic counts of quartic fields</span>
+                    <details class="abstract-details">
+                        <summary>View Abstract</summary>
+                        <p>Malle's conjecture predicts that for a fixed degree <i>n</i>, the number of number fields up to discriminant <i>X</i> is linear in <i>X</i>. This conjecture is established for <i>n</i> &le; 5. For cubic fields, a second main-term of <i>X</i><sup>5/6</sup> is also known. This presentation reviews these results and discusses recent work extending them to quartic fields, specifically for smoothly weighted counts. The method utilizes a calculus with polar divisors of Dirichlet series in multiple variables. (Joint work with Arul Shankar).</p>
+                    </details>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">11:45 am (Room A4):</span> Dennis Sullivan (Stony Brook University & CUNY Graduate Center)
+                </li>
+                <li class="schedule-item" style="background-color: #fff9f9; border-left-color: var(--alert-color);">
+                    <span class="time-slot" style="color: var(--alert-color);">12:30 – 2:00 pm:</span> <strong>Celebration for J. Simons</strong>
+                </li>
+            </ul>
+
+            <div class="session-title">Afternoon Sessions</div>
+            <ul class="schedule-list">
+                <li class="schedule-item">
+                    <span class="time-slot">2:00 pm:</span> Lauren Williams (Harvard University)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">3:00 pm:</span> Claire Voisin (Centre National de la Recherche Scientifique - CNRS)
+                    <span class="talk-title">Title: Points of zero-cycles of algebraic varieties</span>
+                    <details class="abstract-details">
+                        <summary>View Abstract</summary>
+                        <p>An algebraic variety <i>X</i> is defined by polynomial equations in an ambient space. The defining equations have coefficients in a field <i>K</i>. When <i>K</i> is not algebraically closed, there might be no points of <i>X</i> defined over <i>K</i>, but there are always points defined over finite extensions of <i>K</i>, if <i>X</i> is non-empty. This presentation introduces the Chow group of zero-cycles of <i>X</i>, which is built on these points and provides a partial method for computing them, alongside its universal Chow group.</p>
+                        <p>The Chow group CH<sub>0</sub>(<i>X</i>) of zero-cycles on <i>X</i> contains significant information. If the field <i>K</i> is the field of complex numbers, it is established that it relates to holomorphic forms on <i>X</i> (Mumford). Over non-algebraically closed fields, the universal Chow group of zero-cycles is related to rationality properties of <i>X</i>. The discussion covers the notion of Mumford finite versus infinite dimensionality of CH<sub>0</sub> and, on the arithmetic side, the recently developed notion of boundedness versus unboundedness of CH<sub>0</sub>. Related boundedness versus unboundedness statements concerning points on Fano hypersurfaces will also be presented.</p>
+                    </details>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">4:00 pm:</span> John Pardon (Simons Center for Geometry and Physics - SCGP)
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">5:00 pm:</span> Sergei Gukov (California Institute of Technology - Caltech)
+                    <span class="talk-title">Title: The role of AI in mathematical research</span>
+                    <details class="abstract-details">
+                        <summary>View Abstract</summary>
+                        <p>At its core, scientific research is a search for new ideas, new patterns, and new ways to explain or prove theorems. This presentation explores how artificial intelligence (AI) is reshaping different stages of this process.</p>
+                        <p>While AI excels at numerous tasks, it currently struggles with others, such as long-horizon reasoning and far-out-of-distribution generalization. These limitations highlight the extensive scope of meaningful AI research that remains to be conducted. The objective of expanding the role of AI in mathematical research has thus become a central motivation for advancing the field of AI itself. The recent convergence of these two disciplines over the past few years will be examined.</p>
+                    </details>
+                </li>
+                <li class="schedule-item">
+                    <span class="time-slot">5:50 pm:</span> Rob Morris (Institute for Pure and Applied Mathematics - IMPA)
+                    <span class="talk-title">Title: Ramsey numbers, and the art of counting randomly</span>
+                    <details class="abstract-details">
+                        <summary>View Abstract</summary>
+                        <p>In combinatorics, a central problem involves identifying a smaller structured object within a larger, apparently unstructured one. One of the earliest and most influential examples of this phenomenon is Ramsey's theorem, established in 1930. It states that if <i>n = n(k)</i> is sufficiently large, then in any red-blue coloring of the edges of the complete graph on <i>n</i> vertices, there exists a monochromatic clique with <i>k</i> vertices.</p>
+                        <p>Over the past few years, a series of notable breakthroughs related to Ramsey's theorem have occurred. This presentation provides an introduction to the area and details several of these recent developments, including an exponential improvement for the diagonal Ramsey numbers and novel constructions for off-diagonal Ramsey numbers.</p>
+                    </details>
+                </li>
             </ul>
         </div>
     </div>
