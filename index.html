@@ -1,24 +1,524 @@
-\vspace{1em} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Stars 2026</title>
+    <meta name="description" content="Official website for the Future Stars Annual Meeting 2026, supported by the Simons Foundation. July 20-22 at the University of Pennsylvania.">
+    <meta name="keywords" content="Mathematics Conference, Future Stars 2026, Simons Foundation, University of Pennsylvania, Math Meeting">
+    
+    <meta name="google-site-verification" content="4YhP7URcCYqFm9Bz7qw8PxpOOkYGcLMMqgT0WSowYIo" />
 
-\subsection{Oriented \texorpdfstring{$\mathrm{S}^3$}{S3}-bundles over 4-manifolds}
+    <style>
+        :root {
+            --primary-color: #004b57; 
+            --secondary-color: #007a87;
+            --background-color: #f4f7f6;
+            --text-color: #333333;
+            --card-bg: #ffffff;
+            --inst-color: #555555;
+            --accolade-color: #8c1c13;
+            --alert-color: #cc0000;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+        header h2 {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+        nav {
+            background-color: var(--secondary-color);
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        /* Merged Banner & Profile Section */
+        .combined-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        .combined-banner {
+            border-top: 6px solid var(--alert-color);
+            background-color: #fff9f9;
+            text-align: center;
+            padding: 35px 25px;
+            border-bottom: 1px solid #f8e5e5;
+        }
+        .combined-banner h3 {
+            color: var(--alert-color);
+            font-size: 1.5em;
+            border-bottom: none;
+            margin: 0 0 5px 0;
+            padding-bottom: 0;
+        }
+        .combined-banner a {
+            color: var(--alert-color);
+            text-decoration: underline;
+        }
+        .combined-banner a:hover {
+            opacity: 0.8;
+        }
+        .combined-banner p.alert-main {
+            color: var(--alert-color);
+            font-weight: bold;
+            font-size: 1.8em;
+            line-height: 1.2;
+            margin: 10px 0 20px 0;
+        }
 
-An (oriented) \emph{$\mathrm{S}^3$-non-principal bundle} $E$ over a manifold $B$ is defined as a fiber bundle over $B$ with fiber $\mathrm{S}^3$ and structure group $\mathrm{Diff}_+(\mathrm{S}^3)$ (the group of orientation-preserving diffeomorphisms of $\mathrm{S}^3$). The inclusion $\mathrm{SO}(4) = \mathrm{Iso}_+(\mathrm{S}^3) \hookrightarrow \mathrm{Diff}_+(\mathrm{S}^3)$ of the orientation-preserving isometries of $\mathrm{S}^3$ into the orientation-preserving diffeomorphisms of $\mathrm{S}^3$ is a homotopy equivalence \cite[Theorem A]{hatcherproof}. Consequently, the quotient space $\mathrm{Diff}_+(\mathrm{S}^3)/\mathrm{SO}(4)$ is contractible. This topological triviality implies that the associated bundle with this quotient space as fiber admits a global section, allowing us to assume, without loss of generality, that the structure group of a general (oriented) $\mathrm{S}^3$-non-principal bundle $E$ reduces to $\mathrm{SO}(4)$.
+        .poster-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .poster-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+        
+        /* Profile Panel CSS Grid Alignment */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        .profile-card {
+            background: #fafbfc;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .profile-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+        }
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-color);
+            margin-bottom: 15px;
+            background-color: #e1e4e8;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+        }
+        .profile-name {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 1.1em;
+            margin-bottom: 4px;
+        }
+        .profile-inst {
+            font-size: 0.88em;
+            color: var(--inst-color);
+            line-height: 1.4;
+            margin-bottom: 8px;
+            min-height: 40px;
+        }
+        .profile-accolade {
+            font-size: 0.82em;
+            color: var(--accolade-color);
+            font-style: italic;
+            font-weight: 600;
+            line-height: 1.3;
+            border-top: 1px dashed #e1e4e8;
+            padding-top: 6px;
+            width: 100%;
+        }
 
-Any principal $\mathrm{SO}(4)$ bundle $P$ over $\mathrm{S}^4$ is classified by $\pi_3(\mathrm{SO}(4)) \cong \mathbb{Z} \oplus \mathbb{Z}$. Thus any pair of integers $(m, n)$ defines a principal $\mathrm{SO}(4)$ bundle whose associated oriented $\mathrm{S}^3$-non-principal bundle is the Milnor bundle $M_{m,n}$ over $\mathrm{S}^4$. Following Milnor \cite{mi}, we identify the first Pontryagin class as $p_1(P) = 2(m-n)$, and according to Steenrod \cite{steenrod}, the Euler class is given by $\mathrm{e}(P) = m+n := k$. In more generality, the following holds:
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .speaker {
+            background: var(--background-color);
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid var(--secondary-color);
+        }
+        .speaker-name {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        .speaker-inst {
+            font-size: 0.9em;
+            color: var(--inst-color);
+        }
+        .form-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .form-list li {
+            background: var(--background-color);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border-left: 4px solid var(--primary-color);
+        }
+        .form-list a {
+            display: inline-block;
+            margin-top: 5px;
+            color: var(--secondary-color);
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .form-list a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        footer a:hover {
+            color: #e0e0e0;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FUTURE STARS</h1>
+        <h2>Annual Meeting of the Simons Foundation for Supported Institutions</h2>
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="program.html">Program</a>
+        <a href="participants.html">Participants</a>
+    </nav>
 
-\begin{theorem}[\cite{Bouwknegt20152}]\label{thm:so(4)principals}
-Any principal $\mathrm{SO}(4)$-bundle $P\rightarrow B$, where $B$ is a simply-connected compact oriented 4-dimensional manifold, is completely classified by its second Stiefel-Whitney class $w_2(P) \in \mathrm{H}^2(B; \mathbb{Z}_2)$ and a pair of integers $m, n \in \mathbb{Z}$. The characteristic classes of the bundle satisfy the equations:
-\begin{equation}
-    p_1(P) = 2(m-n) + \beta,
-\end{equation}
-\begin{equation}
-    \mathrm{e}(P) = m+n,
-\end{equation}
-where $\beta = \langle b \cup b, [B]\rangle \in \mathbb{Z}$ is the self-intersection of an integral lift $b$ of $w_2(P)$. This $\beta$ is compatible with the mod-$4$ Pontryagin square in the sense that $\beta \equiv \langle \mathcal{P}(w_2(P)), [B]\rangle \pmod 4$, where $\mathcal{P}: \mathrm{H}^2(B; \mathbb{Z}_2) \to \mathrm{H}^4(B; \mathbb{Z}_4)$ is the Pontryagin square; here $w_2(P) = w_2(\xi_P)$ for the associated real rank-four vector bundle $\xi_P = P \times_{\mathrm{SO}(4)} \mathbb{R}^4$. 
-\end{theorem}
+    <div class="container">
+        
+        <!-- Unified Event Banner & Featured Participants Grid -->
+        <div class="combined-card">
+            <div class="combined-banner">
+                <h3>July 22nd, 12:30 PM | <a href="https://www.google.com/maps/search/?api=1&query=David+Rittenhouse+Laboratory,+209+S+33rd+Street,+Philadelphia,+PA+19104" target="_blank">Auditorium A4</a></h3>
+                <p class="alert-main">Celebration of Jim Simons and the<br>Scientific Achievements of his Institutes</p>
+                <p style="margin: 0; font-size: 1.0em; color: var(--alert-color); font-weight: bold;">Please note: Jean-Pierre Bourguignon and Phillip Griffiths will participate in the discussions virtually.</p>
+            </div>
+            
+            <div style="padding: 35px 30px;">
+                <h3 style="text-align: center; border-bottom: none; margin-bottom: 10px;">Featured Participants</h3>
+                <div class="profile-grid">
+                    <div class="profile-card">
+                        <img src="gaume.jpg" alt="Luis Álvarez-Gaumé" class="profile-img">
+                        <span class="profile-name">Luis Álvarez-Gaumé</span>
+                        <span class="profile-inst">Simons Center for Geometry and Physics (SCGP)</span>
+                        <span class="profile-accolade">Director of the SCGP, Humboldt Research Awardee & Former Head of the CERN Theory Group</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="bourguignon.jpg" alt="Jean-Pierre Bourguignon" class="profile-img">
+                        <span class="profile-name">Jean-Pierre Bourguignon (Virtual)</span>
+                        <span class="profile-inst">Institut des Hautes Études Scientifiques (IHES)</span>
+                        <span class="profile-accolade">Former President of the European Research Council (ERC)</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="brockhof.jpg" alt="Milena Ferraz Silva Brockhof" class="profile-img">
+                        <span class="profile-name">Milena Ferraz Silva Brockhof</span>
+                        <span class="profile-inst">University of Campinas (UNICAMP)</span>
+                        <span class="profile-accolade">Master's Student & Regular Participant in Simons Institutes Programs</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="chas.jpg" alt="Moira Chas" class="profile-img">
+                        <span class="profile-name">Moira Chas</span>
+                        <span class="profile-inst">Stony Brook University</span>
+                        <span class="profile-accolade">Co-discoverer of String Topology & Leading Expert in Low-Dimensional Topology</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="dellapietra.jpg" alt="Stephen Della Pietra" class="profile-img">
+                        <span class="profile-name">Stephen Della Pietra</span>
+                        <span class="profile-inst">Renaissance Technologies</span>
+                        <span class="profile-accolade">Head of Research at Renaissance Technologies & SCGP Board Member</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="douglas.jpg" alt="Michael Douglas" class="profile-img">
+                        <span class="profile-name">Michael Douglas</span>
+                        <span class="profile-inst">Simons Center for Geometry and Physics (SCGP)</span>
+                        <span class="profile-accolade">Sackler Prize Laureate & Fellow of the American Physical Society</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="fuqua.jpg" alt="Jeffry Fuqua" class="profile-img">
+                        <span class="profile-name">Jeffry Fuqua</span>
+                        <span class="profile-inst">Institute of the Mathematical Sciences of the Americas (IMSA)</span>
+                        <span class="profile-accolade">Instrumental Figure in the Creation of IMSA & Major Supporter of the Mathematical Sciences</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="compean.jpg" alt="Héctor Hugo García Compeán" class="profile-img">
+                        <span class="profile-name">Héctor Hugo García Compeán</span>
+                        <span class="profile-inst">Cinvestav</span>
+                        <span class="profile-accolade">Expert in String Theory, Quantum Field Theory & General Relativity</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="griffiths.jpg" alt="Phillip Griffiths" class="profile-img">
+                        <span class="profile-name">Phillip Griffiths (Virtual)</span>
+                        <span class="profile-inst">Institute for Advanced Study (IAS)</span>
+                        <span class="profile-accolade">Chern Medalist & Member of the National Academy of Sciences</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="katzarkov.jpg" alt="Ludmil Katzarkov" class="profile-img">
+                        <span class="profile-name">Ludmil Katzarkov</span>
+                        <span class="profile-inst">IMSA & ICMS-Sofia</span>
+                        <span class="profile-accolade">Current Director of IMSA & Future Director of the Simons Center for Geometry and Physics (SCGP)</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="kumar.jpg" alt="Abhinav Kumar" class="profile-img">
+                        <span class="profile-name">Abhinav Kumar</span>
+                        <span class="profile-inst">Renaissance Technologies</span>
+                        <span class="profile-accolade">Renowned for Breakthroughs in Sphere Packing & Former MIT Faculty</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="lupercio.jpg" alt="Ernesto Lupercio" class="profile-img">
+                        <span class="profile-name">Ernesto Lupercio</span>
+                        <span class="profile-inst">Cinvestav</span>
+                        <span class="profile-accolade">ICTP Ramanujan Prize Winner & Alumnus of the Global Young Academy</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="maldacena.jpg" alt="Juan Maldacena" class="profile-img">
+                        <span class="profile-name">Juan Maldacena</span>
+                        <span class="profile-inst">Institute for Advanced Study (IAS)</span>
+                        <span class="profile-accolade">Chair of the SCGP Scientific Board, Fundamental Physics Prize & Dirac Medalist</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="mesquita.jpg" alt="Jaqueline Mesquita" class="profile-img">
+                        <span class="profile-name">Jaqueline Mesquita</span>
+                        <span class="profile-inst">University of Campinas (UNICAMP)</span>
+                        <span class="profile-accolade">President of the Brazilian Mathematical Society and UMALCA | L'Oréal-UNESCO For Women in Science Awardee</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="milousheva.jpg" alt="Velichka Milousheva" class="profile-img">
+                        <span class="profile-name">Velichka Milousheva</span>
+                        <span class="profile-inst">Institute of Mathematics and Informatics (IMI-BAS)</span>
+                        <span class="profile-accolade">Deputy Director of IMI-BAS & Expert in Differential Geometry</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="morgan.jpg" alt="John Morgan" class="profile-img">
+                        <span class="profile-name">John Morgan</span>
+                        <span class="profile-inst">Simons Center for Geometry and Physics (SCGP)</span>
+                        <span class="profile-accolade">Founding Faculty Member & Member of the National Academy of Sciences</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="nunez.jpg" alt="Luis Núñez-Betancourt" class="profile-img">
+                        <span class="profile-name">Luis Núñez-Betancourt</span>
+                        <span class="profile-inst">Center for Mathematical Research (CIMAT)</span>
+                        <span class="profile-accolade">First Winner of the José Adem Prize for Mathematical Research in Mexico</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="revalski.jpg" alt="Julian Revalski" class="profile-img">
+                        <span class="profile-name">Julian Revalski</span>
+                        <span class="profile-inst">ICMS-Sofia</span>
+                        <span class="profile-accolade">Current Director of ICMS-Sofia & Former President of the Bulgarian Academy of Sciences</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="rodel.jpg" alt="Angela Rodel" class="profile-img">
+                        <span class="profile-name">Angela Rodel</span>
+                        <span class="profile-inst">Fulbright Bulgaria</span>
+                        <span class="profile-accolade">Executive Director of the Bulgarian-American Fulbright Commission</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="schaposnik.jpg" alt="Laura Schaposnik" class="profile-img">
+                        <span class="profile-name">Laura Schaposnik</span>
+                        <span class="profile-inst">University of Illinois Chicago (UIC)</span>
+                        <span class="profile-accolade">Expert in Higgs Bundles and Geometric Structures</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="simons.jpg" alt="Marilyn Simons" class="profile-img">
+                        <span class="profile-name">Marilyn Simons</span>
+                        <span class="profile-inst">Simons Foundation</span>
+                        <span class="profile-accolade">Co-Founder and Chair of the Board of the Simons Foundation</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="spergel.jpg" alt="David Spergel" class="profile-img">
+                        <span class="profile-name">David Spergel</span>
+                        <span class="profile-inst">Simons Foundation</span>
+                        <span class="profile-accolade">President of the Simons Foundation, MacArthur Fellow & Breakthrough Prize Laureate</span>
+                    </div>
+                    <div class="profile-card">
+                        <img src="sullivan.jpg" alt="Dennis Sullivan" class="profile-img">
+                        <span class="profile-name">Dennis Sullivan</span>
+                        <span class="profile-inst">Stony Brook University & CUNY Graduate Center</span>
+                        <span class="profile-accolade">Abel Prize Laureate & Member of the National Academy of Sciences</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-\begin{remark}
-In \cite{CROWLEY2003363}, a classification of total spaces of bundles over the four-sphere with fiber a three-sphere is provided, considering both orientation-preserving and reversing homotopy equivalence, homeomorphism, and diffeomorphism. Care must be taken, however, as the definition of $M_{m,n}$ in that context differs slightly from ours. We refer the reader to Remark 1.1 in the cited reference.
-\end{remark}
+        <!-- Introductory Text Block -->
+        <div class="card">
+            <p>We are pleased to announce the Future Stars Annual Meeting of the Simons Foundation for Supported Institutions. The conference will be held from July 20 to 22, 2026, at the University of Pennsylvania, David Rittenhouse Laboratory, located at <a href="https://www.google.com/maps/search/?api=1&query=David+Rittenhouse+Laboratory,+209+S+33rd+Street,+Philadelphia,+PA+19104" target="_blank" style="color: var(--secondary-color); font-weight: bold;">209 S 33rd Street, Philadelphia, PA 19104</a>.</p>
+        </div>
 
-\vspace{1em} 
+        <div class="grid-2">
+            <div class="poster-container">
+                <img src="poster.jpg" alt="Conference Poster">
+            </div>
+            
+            <div class="card">
+                <h3>Event Details</h3>
+                <p><strong>Dates:</strong> July 20-22, 2026</p>
+                <p><strong>Location:</strong><br>
+                University of Pennsylvania<br>
+                <a href="https://www.google.com/maps/search/?api=1&query=David+Rittenhouse+Laboratory,+209+S+33rd+Street,+Philadelphia,+PA+19104" target="_blank" style="color: var(--secondary-color);">David Rittenhouse Laboratory<br>
+                209 S 33rd Street<br>
+                Philadelphia, PA 19104</a></p>
+                <p><strong>Information:</strong> <a href="http://imsa.miami.edu" target="_blank" style="color: var(--secondary-color);">imsa.miami.edu</a></p>
+                
+                <h3 style="margin-top: 30px;">Program Highlights</h3>
+                <p>The meeting will feature invited talks by leading mathematicians, alongside short talks by young researchers. Please visit the <a href="program.html" style="color: var(--secondary-color);">Program</a> page for forthcoming schedule details.</p>
+            </div>
+        </div>
+
+        <!-- Registration and Financial Support Block -->
+        <div class="card">
+            <h3>Registration and Financial Support</h3>
+            <p style="font-weight: bold; color: var(--alert-color);">Please note: The participation of Jean-Pierre Bourguignon and Phillip Griffiths will be conducted virtually. They will not be attending the conference in person.</p>
+            
+            <p>Financial support for this conference is managed and distributed by the Institute of the Mathematical Sciences of the Americas (IMSA). Funding is allocated into two primary categories: participants based in Latin America and participants based outside of Latin America.</p>
+            
+            <div style="border-left: 4px solid var(--alert-color); background-color: #fff9f9; padding: 15px; margin: 20px 0;">
+                <h4 style="color: var(--alert-color); margin-top: 0; margin-bottom: 10px; font-size: 1.1em;">Notice for Latin American Applicants</h4>
+                <p style="margin: 0; font-size: 0.95em;">Applications for funding from individuals residing in Latin America are conditional upon possessing a valid US visa during the application process, or possessing an alternative legal mechanism to enter the United States, such as dual citizenship. <strong>The registration deadline for Latin American participants is June 10, 2026.</strong></p>
+            </div>
+
+            <p>Please utilize the appropriate form below to complete your registration:</p>
+            
+            <ul class="form-list">
+                <li>
+                    <strong>General Registration</strong><br>
+                    For participants who do not require financial support from IMSA.<br>
+                    <a href="https://umcas.wufoo.com/forms/q1vig5oi04gnhik/" target="_blank">Access Form No. 1</a>
+                </li>
+                <li>
+                    <strong>U.S. Participants (Support Requested)</strong><br>
+                    For participants based in the United States who require financial support from IMSA.<br>
+                    <a href="https://umcas.wufoo.com/forms/qsl94ek0dbdj87/" target="_blank">Access Form No. 2</a>
+                </li>
+                <li>
+                    <strong>Latin American Participants (Support Requested)</strong><br>
+                    For participants based in Latin America who require financial support from IMSA. The distinct visa inquiries require a separate processing form.<br>
+                    <a href="https://umcas.wufoo.com/forms/qavar1w06gsrbb/" target="_blank">Access Form No. 3</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Confirmed Speakers</h3>
+            <div class="speakers-grid">
+                <div class="speaker"><span class="speaker-name">Abhinav Kumar</span>, <span class="speaker-inst">Renaissance Technologies</span></div>
+                <div class="speaker"><span class="speaker-name">Alejandro Tolcachier</span>, <span class="speaker-inst">CIEM-CONICET & FAMAF-UNC</span></div>
+                <div class="speaker"><span class="speaker-name">Alex Rodriguez</span>, <span class="speaker-inst">Stony Brook University</span></div>
+                <div class="speaker"><span class="speaker-name">Alexander Vitanov</span>, <span class="speaker-inst">ICMS-Sofia</span></div>
+                <div class="speaker"><span class="speaker-name">Alma Sarai Hernandez Torres</span>, <span class="speaker-inst">UNAM</span></div>
+                <div class="speaker"><span class="speaker-name">Analia Victoria Torres</span>, <span class="speaker-inst">Universidad Nacional de Córdoba & CIEM-CONICET</span></div>
+                <div class="speaker"><span class="speaker-name">Anibal Aravena</span>, <span class="speaker-inst">UMass Amherst</span></div>
+                <div class="speaker"><span class="speaker-name">Bogdan Georgiev</span>, <span class="speaker-inst">Google DeepMind</span></div>
+                <div class="speaker"><span class="speaker-name">Boris Alexeev</span>, <span class="speaker-inst">OpenAI</span></div>
+                <div class="speaker"><span class="speaker-name">Carlos Alfonso Ruiz Guido</span>, <span class="speaker-inst">Colegio de Matemáticas Bourbaki</span></div>
+                <div class="speaker"><span class="speaker-name">Carolina Araujo</span>, <span class="speaker-inst">IMPA</span></div>
+                <div class="speaker"><span class="speaker-name">Claire Voisin</span>, <span class="speaker-inst">CNRS</span></div>
+                <div class="speaker"><span class="speaker-name">Crystianne Lilian de Andrade</span>, <span class="speaker-inst">UNICAMP</span></div>
+                <div class="speaker"><span class="speaker-name">Dennis Sullivan</span>, <span class="speaker-inst">Stony Brook/CUNY</span></div>
+                <div class="speaker"><span class="speaker-name">Enrique Ruby Becerra</span>, <span class="speaker-inst">Cinvestav</span></div>
+                <div class="speaker"><span class="speaker-name">Ernesto Lupercio</span>, <span class="speaker-inst">Cinvestav</span></div>
+                <div class="speaker"><span class="speaker-name">Giovane Paes Galindo Neto</span>, <span class="speaker-inst">ICMS-Sofia</span></div>
+                <div class="speaker"><span class="speaker-name">Higinio Serrano Garcia</span>, <span class="speaker-inst">Cinvestav</span></div>
+                <div class="speaker"><span class="speaker-name">Jacob Tsimerman</span>, <span class="speaker-inst">Toronto</span></div>
+                <div class="speaker"><span class="speaker-name">Jaqueline Mesquita</span>, <span class="speaker-inst">UNICAMP</span></div>
+                <div class="speaker"><span class="speaker-name">Lauren Williams</span>, <span class="speaker-inst">Harvard</span></div>
+                <div class="speaker"><span class="speaker-name">Leonardo Cavenaghi</span>, <span class="speaker-inst">ICMS-Sofia & IMI-BAS</span></div>
+                <div class="speaker"><span class="speaker-name">Michael Douglas</span>, <span class="speaker-inst">SCGP</span></div>
+                <div class="speaker"><span class="speaker-name">Moira Chas</span>, <span class="speaker-inst">Stony Brook</span></div>
+                <div class="speaker"><span class="speaker-name">Pedro Antonio Muniz Martins</span>, <span class="speaker-inst">UNICAMP</span></div>
+                <div class="speaker"><span class="speaker-name">Rafael Montezuma Pinheiro Cabral</span>, <span class="speaker-inst">Federal University of Ceará (UFC)</span></div>
+                <div class="speaker"><span class="speaker-name">Randall Kayser</span>, <span class="speaker-inst">Stony Brook University</span></div>
+                <div class="speaker"><span class="speaker-name">Rob Morris</span>, <span class="speaker-inst">IMPA</span></div>
+                <div class="speaker"><span class="speaker-name">Samir Albus</span>, <span class="speaker-inst">University of Miami</span></div>
+                <div class="speaker"><span class="speaker-name">Sergei Gukov</span>, <span class="speaker-inst">Caltech</span></div>
+                <div class="speaker"><span class="speaker-name">Spencer Cattalani</span>, <span class="speaker-inst">Stony Brook University</span></div>
+                <div class="speaker"><span class="speaker-name">Yuri Tschinkel</span>, <span class="speaker-inst">CIMS/NYU, Simons Foundation</span></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Advancing the next generation of mathematical researchers.</p>
+        <p>Supported by the <a href="https://www.simonsfoundation.org/" target="_blank">Simons Foundation</a>, <a href="https://icms.bg/" target="_blank">ICMS Sofia</a>, <a href="https://scgp.stonybrook.edu/" target="_blank">SCGP Stony Brook</a>, <a href="https://fapesp.br/" target="_blank">FAPESP</a>, and <a href="https://imsa.miami.edu/" target="_blank">IMSA</a>.</p>
+    </footer>
+</body>
+</html>
